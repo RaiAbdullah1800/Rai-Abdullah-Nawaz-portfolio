@@ -1,167 +1,118 @@
-import { useNavigate } from 'react-router-dom'; // MUI
-
 import Box from '@mui/material/Box';
-import Chip from '@mui/material/Chip';
+import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid2';
-import Alert from '@mui/material/Alert';
-import Radio from '@mui/material/Radio';
 import Stack from '@mui/material/Stack';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Switch from '@mui/material/Switch';
-import Tooltip from '@mui/material/Tooltip';
-import Checkbox from '@mui/material/Checkbox';
-import Container from '@mui/material/Container';
-import ButtonBase from '@mui/material/ButtonBase';
-import IconButton from '@mui/material/IconButton';
-import AvatarGroup from '@mui/material/AvatarGroup';
-import LinearProgress from '@mui/material/LinearProgress';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import CircularProgress from '@mui/material/CircularProgress'; // MUI ICON COMPONENTS
+import Container from '@mui/material/Container'; // CUSTOM COMPONENTS
 
-import Add from '@mui/icons-material/Add';
-import Error from '@mui/icons-material/Error';
-import Delete from '@mui/icons-material/Delete';
-import KeyboardTab from '@mui/icons-material/KeyboardTab';
-import Masonry from '@mui/lab/Masonry'; // CUSTOM COMPONENTS
+import { H2, H6, Paragraph } from '@/components/typography';
 
-import { H2, Paragraph } from '@/components/typography'; // CUSTOM PAGE SECTION COMPONENTS
+// CUSTOM DATA
+const LIST_1 = [
+  {
+    id: 1,
+    image: '/static/landing/icons/streamlit.png',
+    title: 'Model Testing UI',
+    description: 'Design Streamlit apps to test and visualize ML model outputs interactively.'
+  },
+  {
+    id: 2,
+    image: '/static/landing/icons/chatai.png',
+    title: 'Chat Interface for AI Agents',
+    description: 'Rapidly create GUI-based AI assistants to showcase LLM workflows or backend integrations.'
+  },
+  {
+    id: 3,
+    image: '/static/landing/icons/feedback.png',
+    title: 'Real-time Feedback Loop',
+    description: 'Leverage Python logic to make quick iterations with real-time data visualizations and user input.'
+  }
+];
 
-import LiveUser from '@/page-sections/dashboards/analytics/LiveUser';
-import ReturnRate from '@/page-sections/dashboards/ecommerce/ReturnRate';
-import CompleteGoal from '@/page-sections/dashboards/analytics/CompleteGoal';
-import DailyVisitors from '@/page-sections/dashboards/ecommerce/DailyVisitors';
-import SessionBrowser from '@/page-sections/dashboards/analytics/SessionBrowser';
+const LIST_2 = [
+  {
+    id: 1,
+    image: '/static/landing/icons/fastdeployment.png',
+    title: 'Lightweight Deployment',
+    description: 'Deploy Streamlit apps with minimal overhead for demos or stakeholder feedback.'
+  },
+  {
+    id: 2,
+    image: '/static/landing/icons/rapidprototype.png',
+    title: 'Rapid Prototyping',
+    description: 'Quickly test ML ideas with Streamlit’s intuitive layout system and interactive widgets.'
+  },
+  {
+    id: 3,
+    image: '/static/landing/icons/chatbot.svg',
+    title: 'Chatbot Demo',
+    description: 'Use Streamlit to rapidly prototype and showcase LLM-powered chatbot workflows in an interactive UI.'
+  }
+
+];
+
 export default function Section3() {
-  const navigate = useNavigate();
-  return <Container maxWidth="lg" sx={{
-    mt: {
-      sm: 24,
-      xs: 12
-    }
-  }}>
+  return (
+    <Container maxWidth="lg" sx={{ mt: { sm: 12, xs: 6 } }}>
       <Grid container spacing={2}>
-        <Grid size={{
-        lg: 5,
-        md: 6,
-        xs: 12
-      }}>
-          <Box maxWidth={450} position="sticky" top={0} pt={4} mb={{
-          xs: 4,
-          mb: 0
-        }}>
-            <H2 fontSize={36}>Vast collection of components</H2>
-            <Paragraph mt={1} mb={3} fontSize={18} color="text.secondary">
-              Save thousands of development hours with Essence’s well crafted features and clean code
-            </Paragraph>
+        {/* LEFT SIDE: Feature Cards */}
+        <Grid size={{ lg: 7, xs: 12 }}>
+          <Grid container spacing={4}>
+            <Grid size={{ lg: 6, xs: 12 }}>
+              <Stack
+                mt={{ lg: 12, xs: 6 }}
+                spacing={{ md: 4, xs: 3 }}
+                direction={{ lg: 'column', md: 'row', xs: 'column' }}
+              >
+                {LIST_1.map((item) => (
+                  <FeatureCard {...item} key={item.id} />
+                ))}
+              </Stack>
+            </Grid>
+            <Grid size={{ lg: 6, xs: 12 }}>
+              <Stack spacing={{ md: 4, xs: 3 }} direction={{ lg: 'column', md: 'row', xs: 'column' }}>
+                {LIST_2.map((item) => (
+                  <FeatureCard {...item} key={item.id} />
+                ))}
+              </Stack>
+            </Grid>
+          </Grid>
+        </Grid>
 
-            <Button color="secondary" variant="outlined" startIcon={<KeyboardTab />} onClick={() => navigate('/components')}>
-              Browse components
-            </Button>
+        {/* RIGHT SIDE: Heading & Description */}
+        <Grid size={{ lg: 5, xs: 12 }}>
+          <Box maxWidth={450} position="sticky" top={0} pt={4}>
+            <H2 fontSize={36}>⚡ Rapid Prototyping with Streamlit</H2>
+            <Paragraph mt={1} fontSize={18} color="text.secondary">
+              I leverage Streamlit to quickly test and deploy ML models or build AI-driven communication GUIs. It's my
+              go-to tool for internal tooling, quick demos, or agent-based testing environments with intuitive frontend
+              layouts.
+            </Paragraph>
           </Box>
         </Grid>
-
-        <Grid size={{
-        lg: 7,
-        md: 6,
-        xs: 12
-      }}>
-          <Stack spacing={4}>
-            <Alert variant="outlined" severity="info">
-              This is an info alert — check it out!
-            </Alert>
-
-            <Alert severity="error" icon={<Error />} action={<Stack className="btn-group" direction="row">
-                  <ButtonBase>UNDO</ButtonBase>
-                  <ButtonBase>Action</ButtonBase>
-                </Stack>}>
-              This is an error alert — check it out!
-            </Alert>
-
-            <Stack direction="row" alignItems="center" spacing={2} rowGap={2}>
-              <Button>Primary</Button>
-              <Button variant="outlined" color="warning">
-                Warning
-              </Button>
-
-              <Button color="success" startIcon={<Add />}>
-                With Icon
-              </Button>
-
-              <Button variant="text">Click Me</Button>
-
-              <LinearProgress />
-            </Stack>
-
-            <Stack direction="row" alignItems="center" spacing={2}>
-              <Avatar alt="Remy Sharp" src="/static/user/avatar.png" />
-              <Avatar variant="rounded" alt="Remy Sharp" src="/static/user/user-13.png" sx={{
-              width: 60,
-              height: 60
-            }} />
-
-              <AvatarGroup max={4}>
-                <Avatar alt="Remy Sharp" src="/static/user/user-13.png" />
-                <Avatar alt="Travis Howard" src="/static/user/user-17.png" />
-                <Avatar alt="Travis Howard" src="/static/user/user-18.png" />
-                <Avatar alt="Travis Howard" src="/static/user/user-19.png" />
-                <Avatar alt="Travis Howard" src="/static/user/user-20.png" />
-                <Avatar alt="Travis Howard" src="/static/user/user-20.png" />
-              </AvatarGroup>
-
-              <Chip avatar={<Avatar alt="Natacha" src="/static/user/user-13.png" />} label="Avatar" color="error" />
-
-              <Chip label="Chip Outlined" variant="outlined" color="warning" />
-
-              <CircularProgress color="success" />
-
-              <Tooltip title="Delete">
-                <IconButton>
-                  <Delete />
-                </IconButton>
-              </Tooltip>
-            </Stack>
-
-            <Stack direction="row" alignItems="center" spacing={2}>
-              <div>
-                <FormControlLabel control={<Checkbox size="small" color="error" defaultChecked />} label="Checkbox" />
-              </div>
-
-              <div>
-                <FormControlLabel control={<Radio size="small" color="success" defaultChecked />} label="Radio" />
-              </div>
-
-              <div>
-                <FormControlLabel control={<Switch size="small" defaultChecked />} label="Switch" />
-              </div>
-
-              <div>
-                <FormControlLabel control={<Checkbox size="small" color="warning" indeterminate defaultChecked />} label="Indeterminate" />
-              </div>
-            </Stack>
-
-            <Masonry columns={{
-            sm: 2,
-            xs: 1
-          }}>
-              <div>
-                <SessionBrowser />
-              </div>
-
-              <CompleteGoal chart="area" />
-
-              <DailyVisitors />
-
-              <div>
-                <LiveUser />
-              </div>
-
-              <div>
-                <ReturnRate />
-              </div>
-            </Masonry>
-          </Stack>
-        </Grid>
       </Grid>
-    </Container>;
+    </Container>
+  );
+}
+
+// Feature Card Component
+function FeatureCard(props) {
+  return (
+    <Card
+      sx={{
+        textAlign: 'center',
+        padding: {
+          xl: 6,
+          lg: 5,
+          md: 4,
+          xs: 6
+        }
+      }}
+    >
+      <Box component="img" src={props.image} alt={props.title} py={6} maxWidth={70} />
+      <H6 fontSize={18}>{props.title}</H6>
+      <Paragraph fontSize={16} color="grey.500" mt={2}>
+        {props.description}
+      </Paragraph>
+    </Card>
+  );
 }

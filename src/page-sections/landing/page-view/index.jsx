@@ -10,6 +10,7 @@ import Section4 from '../Section4';
 import Header from '@/layouts/root/Navigation';
 import Section5 from '../Section5';
 import Section6 from '../Section6';
+import { Paragraph } from '@/components/typography';
 export default function LandingPageView() {
   return <Box sx={{
     height: '100%',
@@ -18,6 +19,9 @@ export default function LandingPageView() {
   }}>
     <Header />
     <SectionMain />
+          <br />
+      <hr/>
+      <br/>
       {
       /* ONION HERO AREA */
     }
@@ -27,23 +31,43 @@ export default function LandingPageView() {
       /* CORE FEATURES AREA */
     }
       <Section2 />
-
+      <br />
+      <hr/>
+      <br/>
       {
       /* VAST COLLECTION COMPONENTS AREA */
     }
       <Section3 />
-
+      <br />
+      <hr/>
+      <br/>
       {
       /* APPS & PAGES AREA */
     }
       <Section4 />
-
+      <br />
+      <hr/>
+      <br/>
       {
       /* FOOTER AREA */
     }
       <Section5/>
+      <br />
+      <hr/>
+      <br/>
 
       <Section6/>
+      <br />
+      <hr/>
+
       
+      <Paragraph fontSize={16} textAlign="center" py={6}>
+        Copyright ©{' '}
+        <Box component="a" href="mailto:nawazabdullah18@gmail.com" target="_blank" rel="noopener noreferrer">
+          Rai Abdullah Nawaz
+        </Box>
+        . All rights reserved.
+      </Paragraph>
+
     </Box>;
 }

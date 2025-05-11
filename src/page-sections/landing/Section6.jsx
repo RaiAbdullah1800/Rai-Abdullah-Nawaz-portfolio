@@ -102,7 +102,7 @@ function FeatureCard(props) {
         }
       }}
     >
-      <Box component="img" src={props.image} alt={props.title} py={6} />
+      {/* <Box component="img" src={props.image} alt={props.title} py={6} /> */}
       <H6 fontSize={18}>{props.title}</H6>
       <Paragraph fontSize={16} color="grey.500" mt={2}>
         {props.description}

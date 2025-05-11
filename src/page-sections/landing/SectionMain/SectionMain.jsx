@@ -6,7 +6,7 @@ import FlexBox from '@/components/flexbox/FlexBox';
 import { H6, Paragraph } from '@/components/typography'; // STYLED COMPONENTS
 
 import { HeaderTop, TicketWrapper } from './styles';
-export default function Footer() {
+export default function SectionMain() {
   return <footer>
       <HeaderTop>
         <Container maxWidth="xl">
@@ -25,15 +25,9 @@ export default function Footer() {
               Full-Stack Dev × ML Engineer.
             </H6>
 
-            <FlexBox alignItems="center" gap={2}>
-              <Button size="large" color="inherit" className="buy-btn" href='https://ui8.net/ui-lib/products/essence---ui-kit'>
-                Buy Now
-              </Button>
-
-              <Button size="large" color="inherit" variant="outlined" className="preview-btn" LinkComponent="a" href="/dashboard">
-                Live Preview
-              </Button>
-            </FlexBox>
+            <Paragraph color="white" fontSize={{ sm: 20, xs: 16 }} maxWidth="600px">
+            I specialize in building AI-powered, full-stack web applications. If that’s what you need — let’s talk.
+            </Paragraph>
           </Box>
 
           <img alt="footer" src="/static/landing/illustration.svg" className="illustration" />
@@ -46,7 +40,7 @@ export default function Footer() {
           sm: 24,
           xs: 18
         }} fontWeight={600} mb={3}>
-            Have any questions about our template?
+          Have questions about me or how I can help your project?
           </Paragraph>
 
           <FlexBox justifyContent="center" alignItems="center" gap={2}>
@@ -54,19 +48,17 @@ export default function Footer() {
               Submit Ticket
             </Button>
 
-            <Button target="_blank" LinkComponent="a" variant="outlined" href="mailto:support@ui-lib.com?subject=Essence React Query">
-              Send an email
-            </Button>
+            <Button
+                LinkComponent="a"
+                variant="outlined"
+                href="mailto:nawazabdullah18@gmail.com?subject=Portfolio Related Query"
+              >
+                Schedule a Meeting
+              </Button>
           </FlexBox>
         </TicketWrapper>
       </Container>
 
-      <Paragraph fontSize={16} textAlign="center" py={6}>
-        Copyright ©{' '}
-        <Box component="a" href="https://ui-lib.com" target="_blank">
-          UI Lib
-        </Box>
-        . All rights reserved
-      </Paragraph>
+      
     </footer>;
 }

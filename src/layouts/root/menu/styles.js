@@ -28,7 +28,7 @@ export const MenusContainer = styled('div')({
   zIndex: 5,
   opacity: 0,
   top: '120%',
-  minWidth: 700,
+  minWidth: 150,
   position: 'absolute',
   visibility: 'hidden',
   transition: 'top 300ms',

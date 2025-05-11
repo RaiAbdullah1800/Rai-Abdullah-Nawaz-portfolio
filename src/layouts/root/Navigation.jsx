@@ -93,7 +93,7 @@ export default function Navigation() {
         Components
       </StyledNavItem>
 
-      <Button href="xyz">Schadule A Meeting</Button>
+      <Button href="/maintenance">Submit Ticket</Button>
     </StyledNav>
   );
 
@@ -151,8 +151,8 @@ export default function Navigation() {
             
 
             <ListItem sx={{ mt: 1 }}>
-              <Button fullWidth href="https://ui8.net/ui-lib/products/essence---ui-kit">
-              Schadule A Meeting 
+              <Button fullWidth href="/maintenance">
+              Submit Ticket 
               </Button>
             </ListItem>
           </List>

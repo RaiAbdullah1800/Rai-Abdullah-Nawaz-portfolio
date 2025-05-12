@@ -7,6 +7,7 @@ import { Paragraph } from '@/components/typography';
 import Section1 from '../Section1';
 import Section2 from '../Section2';
 import Section3 from '../Section3';
+import Section5 from '../section-5';
 export default function LandingPageView() {
   return <Box sx={{
     height: '100%',
@@ -45,9 +46,12 @@ export default function LandingPageView() {
       <br/>
 
       <Section4/>
+      
+      <Section5/>
       <br />
-      <hr/>
+      <br />
 
+      
       
       <Paragraph fontSize={16} textAlign="center" py={6}>
         Copyright ©{' '}

@@ -1,16 +1,12 @@
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container'; // CUSTOM PAGE SECTIONS COMPONENTS
-import DashboardHeader from "@/layouts/layout-1/components/DashboardHeader.jsx"
-
 import SectionMain from '../SectionMain';
+
+import Section4 from '../Section4';
+import Header from '@/layouts/root/Navigation';
+import { Paragraph } from '@/components/typography';
 import Section1 from '../Section1';
 import Section2 from '../Section2';
 import Section3 from '../Section3';
-import Section4 from '../Section4';
-import Header from '@/layouts/root/Navigation';
-import Section5 from '../Section5';
-import Section6 from '../Section6';
-import { Paragraph } from '@/components/typography';
 export default function LandingPageView() {
   return <Box sx={{
     height: '100%',
@@ -25,31 +21,30 @@ export default function LandingPageView() {
       {
       /* ONION HERO AREA */
     }
-      <Section1 />
 
       {
       /* CORE FEATURES AREA */
     }
-      <Section2 />
+      <Section1 />
       <br />
       <hr/>
       <br/>
       {
       /* APPS & PAGES AREA */
     }
-      <Section4 />
+      <Section2 />
       <br />
       <hr/>
       <br/>
       {
       /* FOOTER AREA */
     }
-      <Section5/>
+      <Section3/>
       <br />
       <hr/>
       <br/>
 
-      <Section6/>
+      <Section4/>
       <br />
       <hr/>
 

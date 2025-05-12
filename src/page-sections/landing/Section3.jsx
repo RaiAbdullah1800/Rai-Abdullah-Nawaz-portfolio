@@ -2,76 +2,68 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
-import Container from '@mui/material/Container'; // CUSTOM COMPONENTS
+import Container from '@mui/material/Container';
 
 import { H2, H6, Paragraph } from '@/components/typography';
 
-// CUSTOM DATA
+// DATABASE FEATURE LISTS
 const LIST_1 = [
   {
     id: 1,
-    image: '/static/landing/icons/streamlit.png',
-    title: 'Model Testing UI',
-    description: 'Design Streamlit apps to test and visualize ML model outputs interactively.'
+    image: '/static/landing/icons/mongodb.png',
+    title: 'MongoDB Mastery',
+    description: 'Skilled in schema design, indexing, and aggregation pipelines. Use Mongoose for modeling and validation.'
   },
   {
     id: 2,
-    image: '/static/landing/icons/chatai.png',
-    title: 'Chat Interface for AI Agents',
-    description: 'Rapidly create GUI-based AI assistants to showcase LLM workflows or backend integrations.'
+    image: '/static/landing/icons/firebase.png',
+    title: 'Firebase Integration',
+    description: 'Experience with Firestore, Realtime Database, Firebase Auth, Cloud Functions, and Storage APIs.'
   },
   {
     id: 3,
-    image: '/static/landing/icons/feedback.png',
-    title: 'Real-time Feedback Loop',
-    description: 'Leverage Python logic to make quick iterations with real-time data visualizations and user input.'
-  },
-  {
-    id: 4,
-    image: '/static/landing/icons/fastdeployment.png',
-    title: 'Lightweight Deployment',
-    description: 'Deploy Streamlit apps with minimal overhead for demos or stakeholder feedback.'
-  },
-  {
-    id: 5,
-    image: '/static/landing/icons/rapidprototype.png',
-    title: 'Rapid Prototyping',
-    description: 'Quickly test ML ideas with Streamlit’s intuitive layout system and interactive widgets.'
-  },
-  {
-    id: 6,
-    image: '/static/landing/icons/chatbot.svg',
-    title: 'Chatbot Demo',
-    description: 'Use Streamlit to rapidly prototype and showcase LLM-powered chatbot workflows in an interactive UI.'
+    image: '/static/landing/icons/realtimedatasync.png',
+    title: 'Realtime Data Sync',
+    description: 'Build apps with live updates using Firebase listeners or MongoDB Change Streams for responsive UX.'
   }
 ];
 
 const LIST_2 = [
   {
     id: 1,
-    image: '/static/landing/icons/fastdeployment.png',
-    title: 'Lightweight Deployment',
-    description: 'Deploy Streamlit apps with minimal overhead for demos or stakeholder feedback.'
+    image: '/static/landing/icons/databasesecurity.png',
+    title: 'Security Best Practices',
+    description: 'Implement Firebase Security Rules and Express middleware for access control and secure queries.'
   },
   {
     id: 2,
-    image: '/static/landing/icons/rapidprototype.png',
-    title: 'Rapid Prototyping',
-    description: 'Quickly test ML ideas with Streamlit’s intuitive layout system and interactive widgets.'
+    image: '/static/landing/icons/structureddatabase.png',
+    title: 'Structured & Unstructured Data',
+    description: 'Comfortable designing for both document-style storage and hierarchical data models.'
   },
   {
     id: 3,
-    image: '/static/landing/icons/chatbot.svg',
-    title: 'Chatbot Demo',
-    description: 'Use Streamlit to rapidly prototype and showcase LLM-powered chatbot workflows in an interactive UI.'
+    image: '/static/landing/icons/weboptimization.png',
+    title: 'Optimized for Scale',
+    description: 'Design queries and indexes for performance at scale across distributed, real-time systems.'
   }
-
 ];
 
 export default function Section3() {
   return (
     <Container maxWidth="lg" sx={{ mt: { sm: 12, xs: 6 } }}>
       <Grid container spacing={2}>
+        {/* RIGHT SIDE: Heading & Description */}
+        <Grid size={{ lg: 5, xs: 12 }}>
+          <Box maxWidth={450} position="sticky" top={0} pt={4}>
+            <H2 fontSize={36}> Database Expertise (MongoDB & Firebase)</H2>
+            <Paragraph mt={1} fontSize={18} color="text.secondary">
+              I work seamlessly with both NoSQL databases to power real-time and scalable applications. From designing
+              schemas and data access patterns in MongoDB to integrating Firebase services for user auth and cloud
+              functions, I ensure fast, secure, and efficient data management.
+            </Paragraph>
+          </Box>
+        </Grid>
         {/* LEFT SIDE: Feature Cards */}
         <Grid size={{ lg: 7, xs: 12 }}>
           <Grid container spacing={4}>
@@ -96,23 +88,13 @@ export default function Section3() {
           </Grid>
         </Grid>
 
-        {/* RIGHT SIDE: Heading & Description */}
-        <Grid size={{ lg: 5, xs: 12 }}>
-          <Box maxWidth={450} position="sticky" top={0} pt={4}>
-            <H2 fontSize={36}>⚡ Rapid Prototyping with Streamlit</H2>
-            <Paragraph mt={1} fontSize={18} color="text.secondary">
-              I leverage Streamlit to quickly test and deploy ML models or build AI-driven communication GUIs. It's my
-              go-to tool for internal tooling, quick demos, or agent-based testing environments with intuitive frontend
-              layouts.
-            </Paragraph>
-          </Box>
-        </Grid>
+
+        
       </Grid>
     </Container>
   );
 }
 
-// Feature Card Component
 function FeatureCard(props) {
   return (
     <Card

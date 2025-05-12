@@ -6,46 +6,46 @@ import Container from '@mui/material/Container';
 
 import { H2, H6, Paragraph } from '@/components/typography';
 
-// BACKEND FEATURE LISTS
+// MACHINE LEARNING & AI FEATURE LISTS
 const LIST_1 = [
   {
     id: 1,
-    image: '/static/landing/icons/express.svg',
-    title: 'Express.js Development',
-    description: 'Proficient in building RESTful APIs with routing, middleware, JWTs, Mongoose ODM, and express-validator.'
+    image: '/static/landing/icons/rag.svg',
+    title: 'RAG-Based Chatbots',
+    description: 'Architect retrieval-augmented generation bots that pull from knowledge bases to generate accurate responses.'
   },
   {
     id: 2,
-    image: '/static/landing/icons/fastapi.svg',
-    title: 'FastAPI for Scalable APIs or for Model Integrations',
-    description: 'Build high-performance APIs using FastAPI, Pydantic for data validation, and async endpoints for concurrency.'
+    image: '/static/landing/icons/agent.svg',
+    title: 'AI Agent Design & Orchestration',
+    description: 'Build multi-agent frameworks with LangChain or custom orchestration pipelines for task-based automation.'
   },
   {
     id: 3,
-    image: '/static/landing/icons/db.svg',
-    title: 'Database Integration',
-    description: 'Integrate and manage databases like MongoDB and PostgreSQL, using ORMs and connection pooling for performance.'
+    image: '/static/landing/icons/training.svg',
+    title: 'Model Training & Deployment',
+    description: 'Train NLP/CV models using TensorFlow or PyTorch, deploy via Docker, Kubernetes, or serverless platforms.'
   }
 ];
 
 const LIST_2 = [
   {
     id: 1,
-    image: '/static/landing/icons/auth.svg',
-    title: 'Authentication & Authorization',
-    description: 'Secure login flows with JWT, OAuth2, session-based authentication, and role-based access control.'
+    image: '/static/landing/icons/mlops.svg',
+    title: 'MLOps & Monitoring',
+    description: 'Automate ML CI/CD, detect data drift, and monitor production models using GitHub Actions, Jenkins, or cloud tools.'
   },
   {
     id: 2,
-    image: '/static/landing/icons/socket.svg',
-    title: 'WebSocket Communication',
-    description: 'Implement real-time features such as live chats, dashboards, and notifications using Socket.IO or FastAPI WebSockets.'
+    image: '/static/landing/icons/etl.svg',
+    title: 'Data Engineering & Feature Store',
+    description: 'Build ETL pipelines, validate data, and manage feature stores like Feast for model input consistency.'
   },
   {
     id: 3,
-    image: '/static/landing/icons/error.svg',
-    title: 'Error Handling & Scalability',
-    description: 'Centralized error handling, logging, rate limiting, and structured architecture for scalable backend systems.'
+    image: '/static/landing/icons/ai.svg',
+    title: 'Scalable AI Infrastructure',
+    description: 'Design intelligent systems that learn, adapt, and scale reliably under real-world workloads.'
   }
 ];
 
@@ -53,8 +53,17 @@ export default function Section4() {
   return (
     <Container maxWidth="lg" sx={{ mt: { sm: 12, xs: 6 } }}>
       <Grid container spacing={2}>
-        
-        
+        {/* LEFT SIDE: Heading and Description */}
+        <Grid size={{ lg: 5, xs: 12 }}>
+          <Box maxWidth={450} position="sticky" top={0} pt={4}>
+            <H2 fontSize={36}>🤖 Machine Learning & AI Systems</H2>
+            <Paragraph mt={1} fontSize={18} color="text.secondary">
+              I design and deploy end‑to‑end ML and AI solutions that power intelligent applications and automated agents.
+              From preprocessing to monitoring, I ensure robust, scalable intelligence across RAG chatbots, agent frameworks,
+              and production-grade models using MLOps best practices.
+            </Paragraph>
+          </Box>
+        </Grid>
 
         {/* RIGHT SIDE: Feature Cards */}
         <Grid container spacing={4} size={{ lg: 7, xs: 12 }}>
@@ -74,21 +83,12 @@ export default function Section4() {
             </Stack>
           </Grid>
         </Grid>
-
-        {/* LEFT SIDE: Heading and Description */}
-        <Grid size={{ lg: 5, xs: 12 }}>
-          <Box maxWidth={450} position="sticky" top={0} pt={4}>
-            <H2 fontSize={36}>🔧 Backend Development (Express.js & FastAPI)</H2>
-            <Paragraph mt={1} fontSize={18} color="text.secondary">
-              I build secure, scalable, and efficient backend services using Express.js and FastAPI. From RESTful API design and robust database management to real-time communication and strong authentication systems, I ensure server-side reliability and performance across every layer of the application. I also implement chatbot logic and workflows in FastAPI to support intelligent, AI-driven user interactions.
-            </Paragraph>
-          </Box>
-        </Grid>
       </Grid>
     </Container>
   );
 }
 
+// Card Component
 function FeatureCard(props) {
   return (
     <Card

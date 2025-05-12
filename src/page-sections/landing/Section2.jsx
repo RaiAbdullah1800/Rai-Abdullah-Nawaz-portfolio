@@ -4,135 +4,62 @@ import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 
-// CUSTOM COMPONENTS
 import { H2, H6, Paragraph } from '@/components/typography';
 
-// // CUSTOMIZED DATA
-// const LIST_1 = [
-//   {
-//     id: 1,
-//     image: '/static/landing/icons/jsxicon.png',
-//     title: 'JSX & Components',
-//     description: 'Clean, modular components using JSX, built for reusability and maintainability across the codebase.'
-//   },
-//   {
-//     id: 2,
-//     image: '/static/landing/icons/statemanagement.png',
-//     title: 'State & Props Management',
-//     description: 'Advanced state management using props, Context API, and Zustand for scalable and complex apps.'
-//   },
-//   {
-//     id: 3,
-//     image: '/static/landing/icons/hooks.png',
-//     title: 'Hooks & Lifecycle',
-//     description: 'Skilled in useState, useEffect, useMemo, and custom hooks to optimize behavior and performance.'
-//   }
-// ];
-
+// BACKEND FEATURE LISTS
 const LIST_1 = [
   {
     id: 1,
-    image: '/static/landing/icons/jsxicon.png',
-    title: 'JSX & Components',
-    description: 'Clean, modular components using JSX, built for reusability and maintainability across the codebase.'
+    image: '/static/landing/icons/express.svg',
+    title: 'Express.js Development',
+    description: 'Proficient in building RESTful APIs with routing, middleware, JWTs, Mongoose ODM, and express-validator.'
   },
   {
     id: 2,
-    image: '/static/landing/icons/statemanagement.png',
-    title: 'State & Props Management',
-    description: 'Advanced state management using props, Context API, and Zustand for scalable and complex apps.'
+    image: '/static/landing/icons/fastapi.svg',
+    title: 'FastAPI for Scalable APIs or for Model Integrations',
+    description: 'Build high-performance APIs using FastAPI, Pydantic for data validation, and async endpoints for concurrency.'
   },
   {
     id: 3,
-    image: '/static/landing/icons/hooks.png',
-    title: 'Hooks & Lifecycle',
-    description: 'Skilled in useState, useEffect, useMemo, and custom hooks to optimize behavior and performance.'
-  },
-  {
-    id: 4,
-    image: '/static/landing/icons/uiux.png',
-    title: 'Dynamic UIs',
-    description: 'Responsive interfaces using event handling, conditional rendering, and intuitive UX logic.'
-  },
-  {
-    id: 5,
-    image: '/static/landing/icons/api.png',
-    title: 'API & WebSockets',
-    description: 'Proficient in REST API integration and real-time updates with WebSocket communication.'
-  },
-  {
-    id: 6,
-    image: '/static/landing/icons/Mui.png',
-    title: 'Modern Styling',
-    description: 'Styling with Tailwind, Bootstrap, and MUI/MUI X for fast, scalable, and accessible UIs.'
-  }
-];
-const LIST_2 = [
-  {
-    id: 1,
-    image: '/static/landing/icons/streamlit.png',
-    title: 'Model Testing UI',
-    description: 'Create interactive dashboards to visualize, test, and validate ML model outputs in real time.'
-  },
-  {
-    id: 2,
-    image: '/static/landing/icons/chatai.png',
-    title: 'AI Chatbot GUIs',
-    description: 'Build intuitive chat interfaces for LLM agents and AI-driven workflows using Streamlit.'
-  },
-  {
-    id: 3,
-    image: '/static/landing/icons/feedback.png',
-    title: 'Live Feedback & Iteration',
-    description: 'Enable rapid experimentation with dynamic user input, data updates, and Python backend logic.'
-  },
-  {
-    id: 4,
-    image: '/static/landing/icons/serverapi.png',
-    title: 'Backend Integration',
-    description: 'Connect Streamlit apps to APIs, databases, or FastAPI backends for full-stack functionality.'
-  },
-  {
-    id: 5,
-    image: '/static/landing/icons/fastdeployment.png',
-    title: 'Lightweight Deployment',
-    description: 'Deploy Streamlit apps quickly with minimal setup for demos, MVPs, or stakeholder feedback.'
-  },
-  {
-    id: 6,
-    image: '/static/landing/icons/widgets.png',
-    title: 'Interactive Widgets for UX',
-    description: 'Use Streamlit’s built-in components like sliders, inputs, and charts to create engaging UIs fast.'
+    image: '/static/landing/icons/db.svg',
+    title: 'Database Integration',
+    description: 'Integrate and manage databases like MongoDB and PostgreSQL, using ORMs and connection pooling for performance.'
   }
 ];
 
+const LIST_2 = [
+  {
+    id: 1,
+    image: '/static/landing/icons/auth.svg',
+    title: 'Authentication & Authorization',
+    description: 'Secure login flows with JWT, OAuth2, session-based authentication, and role-based access control.'
+  },
+  {
+    id: 2,
+    image: '/static/landing/icons/socket.svg',
+    title: 'WebSocket Communication',
+    description: 'Implement real-time features such as live chats, dashboards, and notifications using Socket.IO or FastAPI WebSockets.'
+  },
+  {
+    id: 3,
+    image: '/static/landing/icons/error.svg',
+    title: 'Error Handling & Scalability',
+    description: 'Centralized error handling, logging, rate limiting, and structured architecture for scalable backend systems.'
+  }
+];
 
 export default function Section2() {
   return (
     <Container maxWidth="lg" sx={{ mt: { sm: 12, xs: 6 } }}>
       <Grid container spacing={2}>
-        <Grid size={{ lg: 5, xs: 12 }}>
-          <Box maxWidth={450} position="sticky" top={0} pt={4}>
-            <H2 fontSize={36}>Frontend Development</H2>
-            <H2 fontSize={28}>(React.js Specialist) </H2>
-            <Paragraph mt={1} fontSize={18} color="text.secondary">
-              I build fully responsive, scalable React applications using modern tools, best practices, and clean,
-              component-driven code.
-            </Paragraph>
-            <H2 fontSize={28}>(Rapid Prototyping with Streamlit) </H2>
-            <Paragraph mt={1} fontSize={18} color="text.secondary">
-               I build fast, production-ready chatbot apps using Streamlit for rapid development and deployment.
-            </Paragraph>
-          </Box>
-        </Grid>
+        
+        
 
+        {/* RIGHT SIDE: Feature Cards */}
         <Grid container spacing={4} size={{ lg: 7, xs: 12 }}>
           <Grid size={{ lg: 6, xs: 12 }}>
-            <Stack
-              mt={{ lg: 12, xs: 6 }}
-              spacing={{ md: 4, xs: 3 }}
-              direction={{ lg: 'column', md: 'row', xs: 'column' }}
-            >
+            <Stack mt={{ lg: 12, xs: 6 }} spacing={{ md: 4, xs: 3 }} direction={{ lg: 'column', md: 'row', xs: 'column' }}>
               {LIST_1.map((item) => (
                 <FeatureCard {...item} key={item.id} />
               ))}
@@ -146,6 +73,16 @@ export default function Section2() {
               ))}
             </Stack>
           </Grid>
+        </Grid>
+
+        {/* LEFT SIDE: Heading and Description */}
+        <Grid size={{ lg: 5, xs: 12 }}>
+          <Box maxWidth={450} position="sticky" top={0} pt={4}>
+            <H2 fontSize={36}>🔧 Backend Development (Express.js & FastAPI)</H2>
+            <Paragraph mt={1} fontSize={18} color="text.secondary">
+              I build secure, scalable, and efficient backend services using Express.js and FastAPI. From RESTful API design and robust database management to real-time communication and strong authentication systems, I ensure server-side reliability and performance across every layer of the application. I also implement chatbot logic and workflows in FastAPI to support intelligent, AI-driven user interactions.
+            </Paragraph>
+          </Box>
         </Grid>
       </Grid>
     </Container>
@@ -165,7 +102,7 @@ function FeatureCard(props) {
         }
       }}
     >
-      <Box component="img" src={props.image} alt={props.title} py={6} maxWidth={70} />
+      {/* <Box component="img" src={props.image} alt={props.title} py={6} /> */}
       <H6 fontSize={18}>{props.title}</H6>
       <Paragraph fontSize={16} color="grey.500" mt={2}>
         {props.description}

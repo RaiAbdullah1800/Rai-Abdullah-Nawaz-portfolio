@@ -12,10 +12,8 @@ import {
   IconButton,
   Typography
 } from '@mui/material'
-import Mic from '@mui/icons-material/Mic'
-import CameraAlt from '@mui/icons-material/CameraAlt'
-import AttachFile from '@mui/icons-material/AttachFile'
-import ChevronRight from '@mui/icons-material/ChevronRight'
+import { useTheme } from '@mui/material/styles';
+
 import { useDropzone } from 'react-dropzone'
 import IncomingMsg from './incoming-msg'
 import OutgoingMsg from './outgoing-msg'
@@ -31,6 +29,7 @@ export default function Conversation({ handleOpen }) {
   const [messages, setMessages] = useState([])
   const [draft, setDraft] = useState('')
   const containerRef = useRef(null)
+  const theme = useTheme();
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: (files) => console.log(files),
@@ -71,11 +70,11 @@ export default function Conversation({ handleOpen }) {
   return (
     <Card className="h-full" elevation={0} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* Header */}
-      <Box px={2} py={1} sx={{ borderBottom: '1px solid #e0e0e0' }}>
+      <Box px={2} py={1} sx={{ borderBottom: `1px solid ${theme.palette.divider}` }}>
         <Box display="flex" alignItems="center" gap={1.5}>
           <Avatar src="/static/user/user-19.png" alt="" />
           <Typography variant="h6" fontWeight={600}>
-            My ChatBot
+            Abdullah's Assistant
           </Typography>
         </Box>
       </Box>
@@ -118,8 +117,8 @@ export default function Conversation({ handleOpen }) {
             sx={{
               fontSize: 14,
               fontWeight: 500,
-              backgroundColor: '#f5f5f5',
-              borderRadius: 1,
+              borderBottom: `1px`,
+              backgroundColor: theme.palette.background.default,
               px: 1,
               py: 0.5,
               maxHeight: '4.5em', // roughly 2 lines of text

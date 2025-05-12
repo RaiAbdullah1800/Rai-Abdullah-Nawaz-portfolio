@@ -8,14 +8,10 @@ import RTL from '@/components/rtl'; // ROUTES METHOD
 import { routes } from './routes'; // MUI THEME CREATION METHOD
 import { createCustomTheme } from './theme'; // SITE SETTINGS CUSTOM DEFINED HOOK
 import useSettings from '@/hooks/useSettings'; // I18N FILE
-import { Box, IconButton, Fade } from '@mui/material'
-import { useState } from 'react';
-import CloseIcon from '@mui/icons-material/Close';
-import Conversation from '@/page-sections/chatBot/Conversation';
 import './i18n';
-
-// Import DotLottieReact for chatbot animation
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useState } from 'react';
+// Import the ChatbotBox component
+import ChatbotBox from '@/page-sections/chatBot/page-view';
 
 export default function App() {
   const { settings } = useSettings();
@@ -35,83 +31,8 @@ export default function App() {
             <CssBaseline />
             <RouterProvider router={router} />
 
-            {/* Chatbot Animation — visible on every page */}
-            
-            <Box
-              onClick={toggleChat}
-              style={{
-                position: 'fixed',
-                bottom: 10,
-                right: 10,
-                width: 76,
-                height: 76,
-                zIndex: 1000,
-                cursor: 'pointer',
-              }}
-            >
-              {/* Show Lottie when closed, nothing when open */}
-              {isOpen ? null : (
-                <DotLottieReact
-                  src="https://lottie.host/3b4f0967-2211-45e5-bc76-0b21c06d5ef3/QumKJyCNMl.lottie"
-                  loop
-                  autoplay
-                />
-              )}
-            </Box>
-
-            <IconButton
-              onClick={toggleChat}
-              sx={{
-                position: 'fixed',
-                bottom: 20,
-                right: 20,
-                bgcolor: theme.palette.primary.main,
-                color: 'white',
-                width: 56,
-                height: 56,
-                borderRadius: '50%',
-                boxShadow: 3,
-                zIndex: 999,
-                '&:hover': {
-                  bgcolor: '#115293',
-                },
-              }}
-            >
-              {/* Show CloseIcon when open, nothing when closed */}
-              {isOpen ? <CloseIcon /> : null}
-            </IconButton>
-
-            {/* Chatbot Box */}
-            <Fade in={isOpen}>
-              <Box
-                sx={{
-                  position: 'fixed',
-                  bottom: 80,
-                  right: 20,
-                  width: {
-                    xs: '70%',
-                    sm: 300,
-                    md: 350,
-                    lg: 400,
-                  },
-                  height: {
-                    xs: '60%',
-                    sm: 350,
-                    md: 400,
-                    lg: 450,
-                  },
-                  
-                  boxShadow: 3,
-                  borderRadius: 2,
-                  p: 2,
-                  zIndex: 1000,
-                  overflow: 'auto',
-                }}
-              >
-                <Conversation/>
-              </Box>
-            </Fade>
-
+            {/* Use the ChatbotBox component here */}
+            <ChatbotBox isOpen={isOpen} toggleChat={toggleChat} theme={theme} />
           </RTL>
         </AuthProvider>
       </ThemeProvider>

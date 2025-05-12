@@ -1,11 +1,14 @@
-
-// src/components/OutgoingMsg.jsx
-
 import React from 'react'
 import { Box, Avatar, Typography, Stack } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 
 export default React.memo(function OutgoingMsg({ text, timestamp }) {
-  const time = new Date(timestamp).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+  const theme = useTheme()
+  const time = new Date(timestamp).toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+
   return (
     <Box
       alignSelf="end"
@@ -22,7 +25,7 @@ export default React.memo(function OutgoingMsg({ text, timestamp }) {
               component="span"
               variant="caption"
               fontWeight={400}
-              color="text.secondary"
+              color={theme.palette.text.secondary}
               sx={{ marginRight: 0.5 }}
             >
               {time}
@@ -38,11 +41,11 @@ export default React.memo(function OutgoingMsg({ text, timestamp }) {
 
       <Box
         sx={{
-          bgcolor: '#1976d2',
-          color: 'white',
-          p: 1.5,
-          borderRadius: 2,
-          fontSize: 14,
+          bgcolor: theme.palette.primary.main,        // replaced '#1976d2'
+          color: theme.palette.common.white,          // replaced 'white'
+          p: theme.spacing(1.5),
+          borderRadius: theme.shape.borderRadius,
+          fontSize: theme.typography.body2.fontSize,
         }}
       >
         {text}

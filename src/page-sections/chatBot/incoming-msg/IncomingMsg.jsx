@@ -1,11 +1,14 @@
-
-// src/components/IncomingMsg.jsx
-
 import React from 'react'
 import { Box, Avatar, Typography, Stack } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 
 export default React.memo(function IncomingMsg({ text, timestamp }) {
-  const time = new Date(timestamp).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+  const theme = useTheme()
+  const time = new Date(timestamp).toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+
   return (
     <Box
       maxWidth={{
@@ -21,7 +24,7 @@ export default React.memo(function IncomingMsg({ text, timestamp }) {
         />
         <Box>
           <Typography variant="body2" fontWeight={600} lineHeight={1}>
-            Bot{' '}
+            Assistant{' '}
             <Typography
               component="span"
               variant="caption"
@@ -37,10 +40,11 @@ export default React.memo(function IncomingMsg({ text, timestamp }) {
 
       <Box
         sx={{
-          bgcolor: '#f1f1f1',
-          p: 1.5,
-          borderRadius: 2,
-          fontSize: 14,
+          bgcolor: theme.palette.grey[400], // use theme background
+          color: theme.palette.text.primary,
+          p: theme.spacing(1.5),
+          borderRadius: theme.shape.borderRadius,
+          fontSize: theme.typography.body2.fontSize,
         }}
       >
         {text}

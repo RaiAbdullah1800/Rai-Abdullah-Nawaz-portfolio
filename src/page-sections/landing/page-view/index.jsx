@@ -25,19 +25,12 @@ export default function LandingPageView() {
       {
       /* ONION HERO AREA */
     }
-      {/* <Section1 /> */}
+      <Section1 />
 
       {
       /* CORE FEATURES AREA */
     }
       <Section2 />
-      <br />
-      <hr/>
-      <br/>
-      {
-      /* VAST COLLECTION COMPONENTS AREA */
-    }
-      <Section3 />
       <br />
       <hr/>
       <br/>

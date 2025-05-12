@@ -53,6 +53,17 @@ export default function Section5() {
   return (
     <Container maxWidth="lg" sx={{ mt: { sm: 12, xs: 6 } }}>
       <Grid container spacing={2}>
+        {/* RIGHT SIDE: Heading & Description */}
+        <Grid size={{ lg: 5, xs: 12 }}>
+          <Box maxWidth={450} position="sticky" top={0} pt={4}>
+            <H2 fontSize={36}> Database Expertise (MongoDB & Firebase)</H2>
+            <Paragraph mt={1} fontSize={18} color="text.secondary">
+              I work seamlessly with both NoSQL databases to power real-time and scalable applications. From designing
+              schemas and data access patterns in MongoDB to integrating Firebase services for user auth and cloud
+              functions, I ensure fast, secure, and efficient data management.
+            </Paragraph>
+          </Box>
+        </Grid>
         {/* LEFT SIDE: Feature Cards */}
         <Grid size={{ lg: 7, xs: 12 }}>
           <Grid container spacing={4}>
@@ -77,17 +88,8 @@ export default function Section5() {
           </Grid>
         </Grid>
 
-        {/* RIGHT SIDE: Heading & Description */}
-        <Grid size={{ lg: 5, xs: 12 }}>
-          <Box maxWidth={450} position="sticky" top={0} pt={4}>
-            <H2 fontSize={36}> Database Expertise (MongoDB & Firebase)</H2>
-            <Paragraph mt={1} fontSize={18} color="text.secondary">
-              I work seamlessly with both NoSQL databases to power real-time and scalable applications. From designing
-              schemas and data access patterns in MongoDB to integrating Firebase services for user auth and cloud
-              functions, I ensure fast, secure, and efficient data management.
-            </Paragraph>
-          </Box>
-        </Grid>
+
+        
       </Grid>
     </Container>
   );

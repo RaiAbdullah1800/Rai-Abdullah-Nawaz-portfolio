@@ -53,17 +53,8 @@ export default function Section4() {
   return (
     <Container maxWidth="lg" sx={{ mt: { sm: 12, xs: 6 } }}>
       <Grid container spacing={2}>
-        {/* LEFT SIDE: Heading and Description */}
-        <Grid size={{ lg: 5, xs: 12 }}>
-          <Box maxWidth={450} position="sticky" top={0} pt={4}>
-            <H2 fontSize={36}>🔧 Backend Development (Express.js & FastAPI)</H2>
-            <Paragraph mt={1} fontSize={18} color="text.secondary">
-              I build secure, scalable, and efficient backend services using Express.js and FastAPI. From RESTful API
-              design and robust database management to real-time communication and strong authentication systems, I
-              ensure server-side reliability and performance across every layer of the application.
-            </Paragraph>
-          </Box>
-        </Grid>
+        
+        
 
         {/* RIGHT SIDE: Feature Cards */}
         <Grid container spacing={4} size={{ lg: 7, xs: 12 }}>
@@ -82,6 +73,16 @@ export default function Section4() {
               ))}
             </Stack>
           </Grid>
+        </Grid>
+
+        {/* LEFT SIDE: Heading and Description */}
+        <Grid size={{ lg: 5, xs: 12 }}>
+          <Box maxWidth={450} position="sticky" top={0} pt={4}>
+            <H2 fontSize={36}>🔧 Backend Development (Express.js & FastAPI)</H2>
+            <Paragraph mt={1} fontSize={18} color="text.secondary">
+              I build secure, scalable, and efficient backend services using Express.js and FastAPI. From RESTful API design and robust database management to real-time communication and strong authentication systems, I ensure server-side reliability and performance across every layer of the application. I also implement chatbot logic and workflows in FastAPI to support intelligent, AI-driven user interactions.
+            </Paragraph>
+          </Box>
         </Grid>
       </Grid>
     </Container>

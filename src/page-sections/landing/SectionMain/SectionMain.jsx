@@ -5,7 +5,7 @@ import Container from '@mui/material/Container'; // CUSTOM COMPONENTS
 import FlexBox from '@/components/flexbox/FlexBox';
 import { H6, Paragraph } from '@/components/typography'; // STYLED COMPONENTS
 
-import { HeaderTop, TicketWrapper } from './styles';
+import { HeaderTop, MainTitle, TicketWrapper } from './styles';
 export default function SectionMain() {
   return <footer>
       <HeaderTop>
@@ -21,10 +21,14 @@ export default function SectionMain() {
             sm: 36,
             xs: 27
           }}>
-              Hey there, I’m Abdullah Nawaz <br/>
-              Full-Stack Dev × ML Engineer.
+              Hey there, I’m {" "}  
+              <MainTitle fontSize={{sm:36, sx:27}} >
+                Abdullah Nawaz
+              </MainTitle> 
+              <br />
+               Full-Stack Dev × ML Engineer.
             </H6>
-
+            
             <Paragraph color="white" fontSize={{ sm: 20, xs: 16 }} maxWidth="600px">
             I specialize in building AI-powered, full-stack web applications. If that’s what you need — let’s talk.
             </Paragraph>

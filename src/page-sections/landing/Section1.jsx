@@ -28,7 +28,7 @@ const animated = keyframes`
 }
 `; // STYLED COMPONENTS
 
-const MainTitle = styled(H1)(() => ({
+const MainTitle = styled(Paragraph)(() => ({
   background: `linear-gradient(300deg, #6950E8 0%,#FB6186 25%, #6950E8 50%, #FB6186 75%,#6950E8 100%)`,
   WebkitBackgroundClip: 'text',
   backgroundClip: 'text',

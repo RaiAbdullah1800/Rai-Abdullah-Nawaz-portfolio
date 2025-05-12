@@ -25,6 +25,24 @@ const LIST_1 = [
     image: '/static/landing/icons/feedback.png',
     title: 'Real-time Feedback Loop',
     description: 'Leverage Python logic to make quick iterations with real-time data visualizations and user input.'
+  },
+  {
+    id: 4,
+    image: '/static/landing/icons/fastdeployment.png',
+    title: 'Lightweight Deployment',
+    description: 'Deploy Streamlit apps with minimal overhead for demos or stakeholder feedback.'
+  },
+  {
+    id: 5,
+    image: '/static/landing/icons/rapidprototype.png',
+    title: 'Rapid Prototyping',
+    description: 'Quickly test ML ideas with Streamlit’s intuitive layout system and interactive widgets.'
+  },
+  {
+    id: 6,
+    image: '/static/landing/icons/chatbot.svg',
+    title: 'Chatbot Demo',
+    description: 'Use Streamlit to rapidly prototype and showcase LLM-powered chatbot workflows in an interactive UI.'
   }
 ];
 

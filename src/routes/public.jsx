@@ -13,12 +13,12 @@ const Checkout = Loadable(lazy(() => import('@/pages/checkout')));
 const ContactUs = Loadable(lazy(() => import('@/pages/contact-us')));
 const ComingSoon = Loadable(lazy(() => import('@/pages/coming-soon')));
 const Maintenance = Loadable(lazy(() => import('@/pages/maintenance')));
-const CareerApply = Loadable(lazy(() => import('@/pages/career/apply')));
-const CareerTwo = Loadable(lazy(() => import('@/pages/career/career-2')));
-const CareerDetails = Loadable(lazy(() => import('@/pages/career/details')));
+
+
+const Publications = Loadable(lazy(() => import('@/pages/publication/publication')));
+//const Publications = Loadable(lazy(()=> import('@/pages/publicaion/publication')))
 const AboutUsOne = Loadable(lazy(() => import('@/pages/about-us/about-us-1')));
-const Products = Loadable(lazy(() => import('@/pages/shops/products')));
-const ProductDetails = Loadable(lazy(() => import('@/pages/shops/product-details')));
+
 export const PublicRoutes = [{
   path: 'permission',
   element: <Permission />
@@ -44,32 +44,15 @@ export const PublicRoutes = [{
   }, {
     path: 'pricing',
     element: <Pricing />
+  },
+   {
+    path: 'publication',
+    element: <Publications />
   }, {
     path: 'cart',
     element: <Cart />
   }, {
     path: 'checkout',
     element: <Checkout />
-  }, {
-    path: 'career',
-    children: [{
-      index: true,
-      element: <CareerTwo />
-    }, {
-      path: ':slug',
-      element: <CareerDetails />
-    }, {
-      path: 'apply',
-      element: <CareerApply />
-    }]
-  }, {
-    path: 'products',
-    children: [{
-      index: true,
-      element: <Products />
-    }, {
-      path: ':id',
-      element: <ProductDetails />
-    }]
   }]
 }];

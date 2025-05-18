@@ -7,12 +7,11 @@ import {
   List,
   Button,
   Drawer,
-  Collapse,
   ListItem,
   IconButton,
   useMediaQuery,
   ListItemButton,
-  AppBar,
+  
   Toolbar
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -20,19 +19,12 @@ import { styled } from '@mui/material/styles';
 // ICONS
 import MenuIcon from '@mui/icons-material/Menu';
 import ThemeIcon from '@/icons/ThemeIcon';
-import ChevronDown from '@/icons/ChevronDown';
-
 // CONTEXT
 import { SettingsContext } from '@/contexts/settingsContext';
 
 // COMPONENTS
 import Link from '@/components/link';
 import Scrollbar from '@/components/scrollbar';
-import MegaMenu from './menu/MegaMenu';
-import MegaMenuList from './menu/MegaMenuList';
-
-// NAVIGATION DATA
-import { PAGES_MENUS } from './menu/navigation';
 
 // STYLED COMPONENTS
 const StyledNav = styled('nav')(({ theme }) => ({

@@ -3,7 +3,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'; // AUTH CONTEXT FILE
-import { AuthProvider } from '@/contexts/firebaseContext'; // RIGHT-TO-LEFT SUPPORT COMPONENT
 import RTL from '@/components/rtl'; // ROUTES METHOD
 import { routes } from './routes'; // MUI THEME CREATION METHOD
 import { createCustomTheme } from './theme'; // SITE SETTINGS CUSTOM DEFINED HOOK
@@ -26,15 +25,13 @@ export default function App() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <ThemeProvider theme={theme}>
-        <AuthProvider>
           <RTL>
             <CssBaseline />
             <RouterProvider router={router} />
 
             {/* Use the ChatbotBox component here */}
-            <ChatbotBox isOpen={isOpen} toggleChat={toggleChat} theme={theme} />
+            {/* <ChatbotBox isOpen={isOpen} toggleChat={toggleChat} theme={theme} /> */}
           </RTL>
-        </AuthProvider>
       </ThemeProvider>
     </LocalizationProvider>
   );

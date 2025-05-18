@@ -5,11 +5,7 @@ import Loadable from './Loadable';
 import RootLayout from '@/layouts/root/RootLayout'; // ROLE BASED PERMISSION TEST PAGE
 
 const Permission = Loadable(lazy(() => import('@/pages/permission'))); // FEATURES RELATED PAGES
-
-const Faqs = Loadable(lazy(() => import('@/pages/faq')));
-const Cart = Loadable(lazy(() => import('@/pages/cart')));
 const Pricing = Loadable(lazy(() => import('@/pages/pricing')));
-const Checkout = Loadable(lazy(() => import('@/pages/checkout')));
 const ContactUs = Loadable(lazy(() => import('@/pages/contact-us')));
 const ComingSoon = Loadable(lazy(() => import('@/pages/coming-soon')));
 const Maintenance = Loadable(lazy(() => import('@/pages/maintenance')));
@@ -38,9 +34,9 @@ export const PublicRoutes = [{
   }, {
     path: 'contact-us',
     element: <ContactUs />
-  }, {
-    path: 'faqs',
-    element: <Faqs />
+  // }, {
+  //   path: 'faqs',
+  //   element: <Faqs />
   }, {
     path: 'pricing',
     element: <Pricing />
@@ -48,11 +44,14 @@ export const PublicRoutes = [{
    {
     path: 'publication',
     element: <Publications />
-  }, {
-    path: 'cart',
-    element: <Cart />
-  }, {
-    path: 'checkout',
-    element: <Checkout />
-  }]
+  },
+  //  {
+  //   path: 'cart',
+  //   element: <Cart />
+  // },
+  //  {
+  //   path: 'checkout',
+  //   element: <Checkout />
+  // }
+  ]
 }];

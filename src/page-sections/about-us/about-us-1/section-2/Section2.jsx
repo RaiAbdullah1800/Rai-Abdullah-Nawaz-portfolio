@@ -6,6 +6,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'; // CUST
 import ProgressItem from './ProgressItem';
 import { Paragraph } from '@/components/typography';
 import SectionTitle from '@/components/section-title'; // STYLED COMPONENT
+import { Link } from 'react-router-dom';
 
 import { ImageWrapper, ProgressWrapper } from './styles';
 export default function Section2() {
@@ -28,15 +29,15 @@ export default function Section2() {
           <ProgressWrapper>
             <ProgressItem title="Full Stack Development" value={90} />
             <ProgressItem title="Machine Learning Engineering" value={65} />
-            <ProgressItem title="API Development (REST & GraphQL)" value={85} />
+            <ProgressItem title="API Development (REST)" value={85} />
           </ProgressWrapper>
 
           <ProgressWrapper>
             <ProgressItem title="AI Integration in Web Apps" value={75} />
             <ProgressItem title="DevOps & Deployment (CI/CD)" value={60} />
           </ProgressWrapper>
-          <Button variant="outlined" color="primary">
-            Check my Work <KeyboardArrowRight />
+          <Button variant="outlined" color="primary" component={Link} to="/maintenance">
+            Check my development Work <KeyboardArrowRight />
           </Button>
         </Grid>
 
@@ -46,8 +47,8 @@ export default function Section2() {
         xs: 12
       }}>
           <ImageWrapper>
-            <img src="public/static/aboutme/MyPic2.jpeg" alt="about" width="40%" />
-            <img src="public/static/aboutme/Mypic.png" alt="about" width="50%" />
+            <img src="public/static/aboutme/Abdullah-Nawaz.jpeg" alt="about" width="40%" />
+            <img src="public/static/aboutme/Rai-Abdullah-Nawaz.png" alt="about" width="50%" />
           </ImageWrapper>
         </Grid>
       </Grid>

@@ -20,11 +20,11 @@ export default function ComingSoonPageView() {
             <img src="/static/pages/coming-soon.svg" alt="maintenance" width="100%" />
           </div>
 
-          <TextField placeholder="Enter your email" slotProps={{
+          {/* <TextField placeholder="Enter your email" slotProps={{
           input: {
             endAdornment: <Button>Notify Me</Button>
           }
-        }} />
+        }} /> */}
         </MainContent>
       </Container>
     </GradientBackground>;

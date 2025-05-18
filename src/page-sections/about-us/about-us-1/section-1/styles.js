@@ -3,7 +3,7 @@ export const StyledRoot = styled('div')(({
   theme
 }) => ({
   paddingTop:'5rem',
-  paddingBottom: '20rem',
+  paddingBottom: '13rem',
   '& .title': {
     fontSize: 48,
     fontWeight: 600,

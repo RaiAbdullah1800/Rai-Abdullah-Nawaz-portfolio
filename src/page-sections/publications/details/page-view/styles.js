@@ -3,7 +3,6 @@ import styled from '@mui/material/styles/styled';
 export const Space = styled('div')(({
   theme
 }) => ({
-  height: 200,
   [theme.breakpoints.down('sm')]: {
     height: 170
   },
@@ -20,11 +19,11 @@ export const StyledContainer = styled(Container)({
 
 export const ImageWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
-  justifyContent: 'center',  // horizontal center
-  alignItems: 'center',      // vertical center
+  justifyContent: 'right',  // horizontal center
+  alignItems: 'right',      // vertical center
   width: '100%',
   height: 'auto',
-  paddingTop: '2rem',        // optional: space above the image
+  // paddingTop: '2rem',        // optional: space above the image
   // paddingBottom: '1rem',     // optional: space below the image
 
   '& img': {

@@ -12,7 +12,7 @@ import { H2, H6, Paragraph } from '@/components/typography';
 const LIST_1 = [
   {
     id: 1,
-    image: 'public/static/landing/icons/react js.png',
+    image: 'public/static/landing/icons/react.png',
     title: 'React.js',
     description: 'Build component-driven, interactive UIs with React.js, using hooks, JSX, and modern state management libraries.'
   },
@@ -106,7 +106,7 @@ function FeatureCard(props) {
         }
       }}
     >
-  <img src={props.image} alt={props.title} width='100px' />
+  <img src={props.image} alt={props.title} width='70px' height='auto' />
       <H6 fontSize={18}>{props.title}</H6>
       <Paragraph fontSize={16} color="grey.500" mt={2}>
         {props.description}

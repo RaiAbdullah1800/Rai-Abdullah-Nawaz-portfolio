@@ -7,24 +7,28 @@ import Container from '@mui/material/Container';
 import { H2, H6, Paragraph } from '@/components/typography';
 
 // MACHINE LEARNING & AI FEATURE LISTS
+// MACHINE LEARNING & AI FEATURE LISTS (Updated)
 const LIST_1 = [
   {
     id: 1,
-    image: '/static/landing/icons/rag.svg',
-    title: 'RAG-Based Chatbots',
-    description: 'Architect retrieval-augmented generation bots that pull from knowledge bases to generate accurate responses.'
+    image: '/static/landing/icons/nlu.svg',
+    title: 'Natural Language Understanding (NLU)',
+    description:
+      'Develop systems that intelligently process human language using NLP techniques like sentiment analysis, entity recognition, and summarization.'
   },
   {
     id: 2,
-    image: '/static/landing/icons/agent.svg',
-    title: 'AI Agent Design & Orchestration',
-    description: 'Build multi-agent frameworks with LangChain or custom orchestration pipelines for task-based automation.'
+    image: '/static/landing/icons/integration.svg',
+    title: 'AI Integration in Web Apps',
+    description:
+      'Embed AI models directly into React or FastAPI-based web apps to enable smart user flows, recommendations, and automation.'
   },
   {
     id: 3,
-    image: '/static/landing/icons/training.svg',
-    title: 'Model Training & Deployment',
-    description: 'Train NLP/CV models using TensorFlow or PyTorch, deploy via Docker, Kubernetes, or serverless platforms.'
+    image: '/static/landing/icons/modeldev.svg',
+    title: 'Custom AI Model Development',
+    description:
+      'Design and train AI models from scratch using supervised, unsupervised, and reinforcement learning to solve forecasting and optimization challenges.'
   }
 ];
 
@@ -33,21 +37,25 @@ const LIST_2 = [
     id: 1,
     image: '/static/landing/icons/mlops.svg',
     title: 'MLOps & Monitoring',
-    description: 'Automate ML CI/CD, detect data drift, and monitor production models using GitHub Actions, Jenkins, or cloud tools.'
+    description:
+      'Deploy ML pipelines with CI/CD, monitor production models, and track performance over time with tools like GitHub Actions and Prometheus.'
   },
   {
     id: 2,
-    image: '/static/landing/icons/etl.svg',
-    title: 'Data Engineering & Feature Store',
-    description: 'Build ETL pipelines, validate data, and manage feature stores like Feast for model input consistency.'
+    image: '/static/landing/icons/data.svg',
+    title: 'Data Engineering & Feature Stores',
+    description:
+      'Build robust data pipelines and manage feature stores for consistent and reliable model inputs using tools like Feast or DVC.'
   },
   {
     id: 3,
-    image: '/static/landing/icons/ai.svg',
-    title: 'Scalable AI Infrastructure',
-    description: 'Design intelligent systems that learn, adapt, and scale reliably under real-world workloads.'
+    image: '/static/landing/icons/scraper.svg', // update icon path as needed
+    title: 'Data Scraping & Automation',
+    description:
+      'Scrape and structure web data for training ML models. Automate data collection using tools like BeautifulSoup, Selenium, or Playwright.'
   }
 ];
+
 
 export default function Section4() {
   return (

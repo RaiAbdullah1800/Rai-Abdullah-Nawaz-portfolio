@@ -4,7 +4,7 @@ import Section1 from '../section-1';
 import Section2 from '../section-2';
 import HeaderEffect from '@/layouts/root/HeaderEffect';
 export default function ContactUsPageView() {
-  return <Fragment>
+  return < >
       {
       /* EXPLORE OUR WORLD SECTION */
     }
@@ -16,5 +16,5 @@ export default function ContactUsPageView() {
       /* CONTACT FORM SECTION */
     }
       <Section2 />
-    </Fragment>;
+    </ >;
 }

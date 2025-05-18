@@ -4,6 +4,7 @@ export const StyledRoot = styled('div')(({
 }) => ({
   color: 'white',
   position: 'relative',
+  paddingTop:theme.spacing(10),
   paddingBottom: theme.spacing(16),
   '& .content': {
     position: 'relative',
@@ -11,7 +12,7 @@ export const StyledRoot = styled('div')(({
   },
   '& .title': {
     fontSize: 42,
-    marginTop: '5rem',
+    marginTop: '2rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: 36
     },

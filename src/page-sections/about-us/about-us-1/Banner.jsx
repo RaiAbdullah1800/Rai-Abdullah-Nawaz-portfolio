@@ -2,7 +2,7 @@ import styled from '@mui/material/styles/styled';
 const StyledImage = styled('img')(({
   theme
 }) => ({
-  marginTop: '-15rem',
+  marginTop: '-10rem',
   width: '100%',
   borderRadius: 20,
   position: 'relative',
@@ -16,5 +16,5 @@ const StyledImage = styled('img')(({
   }
 }));
 export default function Banner() {
-  return <StyledImage alt="hero" src="/static/cover/about-hero.png" />;
+  return <StyledImage alt="hero" src="public/static/aboutme/my_Banner_page.jpg" />;
 }

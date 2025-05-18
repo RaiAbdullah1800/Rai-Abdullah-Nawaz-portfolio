@@ -28,11 +28,11 @@ export const MenusContainer = styled('div')({
   zIndex: 5,
   opacity: 0,
   top: '120%',
-  minWidth: 150,
+  minWidth: 300,
   position: 'absolute',
   visibility: 'hidden',
   transition: 'top 300ms',
-  transform: `translate(-50%, 0%)`
+  transform: `translate(-10%, 0%)`
 });
 export const MainListItem = styled('li')(({
   theme

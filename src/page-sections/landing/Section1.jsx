@@ -12,77 +12,41 @@ import { H2, H6, Paragraph } from '@/components/typography';
 const LIST_1 = [
   {
     id: 1,
-    image: '/static/landing/icons/jsxicon.png',
-    title: 'JSX & Components',
-    description: 'Clean, modular components using JSX, built for reusability and maintainability across the codebase.'
+    image: 'public/static/landing/icons/react js.png',
+    title: 'React.js',
+    description: 'Build component-driven, interactive UIs with React.js, using hooks, JSX, and modern state management libraries.'
   },
   {
     id: 2,
-    image: '/static/landing/icons/statemanagement.png',
-    title: 'State & Props Management',
-    description: 'Advanced state management using props, Context API, and Zustand for scalable and complex apps.'
+    image: '/static/landing/icons/js.png',
+    title: 'Express.js',
+    description: 'Create robust RESTful APIs using Express.js with routing, middleware, JWT authentication, and error handling.'
   },
   {
     id: 3,
-    image: '/static/landing/icons/hooks.png',
-    title: 'Hooks & Lifecycle',
-    description: 'Skilled in useState, useEffect, useMemo, and custom hooks to optimize behavior and performance.'
-  },
-  {
-    id: 4,
-    image: '/static/landing/icons/uiux.png',
-    title: 'Dynamic UIs',
-    description: 'Responsive interfaces using event handling, conditional rendering, and intuitive UX logic.'
-  },
-  {
-    id: 5,
-    image: '/static/landing/icons/api.png',
-    title: 'API & WebSockets',
-    description: 'Proficient in REST API integration and real-time updates with WebSocket communication.'
-  },
-  {
-    id: 6,
-    image: '/static/landing/icons/Mui.png',
-    title: 'Modern Styling',
-    description: 'Styling with Tailwind, Bootstrap, and MUI/MUI X for fast, scalable, and accessible UIs.'
+    image: '/static/landing/icons/mongodb.png',
+    title: 'MongoDB',
+    description: 'Work with MongoDB for flexible NoSQL storage, schema design, aggregation, and performance optimization.'
   }
 ];
 const LIST_2 = [
   {
     id: 1,
     image: '/static/landing/icons/streamlit.png',
-    title: 'Model Testing UI',
-    description: 'Create interactive dashboards to visualize, test, and validate ML model outputs in real time.'
+    title: 'Streamlit',
+    description: 'Build data-driven, interactive Python dashboards and prototypes for ML models using Streamlit.'
   },
   {
     id: 2,
-    image: '/static/landing/icons/chatai.png',
-    title: 'AI Chatbot GUIs',
-    description: 'Build intuitive chat interfaces for LLM agents and AI-driven workflows using Streamlit.'
+    image: '/static/landing/icons/fastapi.png',
+    title: 'FastAPI',
+    description: 'Develop fast, asynchronous backend APIs with Python using FastAPI and Pydantic for validation.'
   },
   {
     id: 3,
-    image: '/static/landing/icons/feedback.png',
-    title: 'Live Feedback & Iteration',
-    description: 'Enable rapid experimentation with dynamic user input, data updates, and Python backend logic.'
-  },
-  {
-    id: 4,
-    image: '/static/landing/icons/serverapi.png',
-    title: 'Backend Integration',
-    description: 'Connect Streamlit apps to APIs, databases, or FastAPI backends for full-stack functionality.'
-  },
-  {
-    id: 5,
-    image: '/static/landing/icons/fastdeployment.png',
-    title: 'Lightweight Deployment',
-    description: 'Deploy Streamlit apps quickly with minimal setup for demos, MVPs, or stakeholder feedback.'
-  },
-  {
-    id: 6,
-    image: '/static/landing/icons/widgets.png',
-    title: 'Interactive Widgets for UX',
-    description: 'Use Streamlit’s built-in components like sliders, inputs, and charts to create engaging UIs fast.'
+    image: '/static/landing/icons/firebase.png',
+    title: 'Firebase',
+    description: 'Leverage Firebase for real-time databases, authentication, cloud functions, and scalable hosting.'
   }
 ];
 
@@ -93,16 +57,13 @@ export default function Section1() {
       <Grid container spacing={2}>
         <Grid size={{ lg: 5, xs: 12 }}>
           <Box maxWidth={450} position="sticky" top={0} pt={4}>
-            <H2 fontSize={36}>Frontend Development</H2>
-            <H2 fontSize={28}>(React.js Specialist) </H2>
+            <H2 fontSize={36} >Full stack Development</H2>
+            
             <Paragraph mt={1} fontSize={18} color="text.secondary">
-              I build fully responsive, scalable React applications using modern tools, best practices, and clean,
+              (MERN Stack Specialist – 2 years of industrial experience)<br/>(FastAPI Developer – 7 months of experience) <br/><br/> I build fully responsive, scalable MERN STACK applications using modern tools, best practices, and clean,
               component-driven code.
             </Paragraph>
-            <H2 fontSize={28}>(Rapid Prototyping with Streamlit) </H2>
-            <Paragraph mt={1} fontSize={18} color="text.secondary">
-               I build fast, production-ready chatbot apps using Streamlit for rapid development and deployment.
-            </Paragraph>
+            
           </Box>
         </Grid>
 
@@ -145,7 +106,7 @@ function FeatureCard(props) {
         }
       }}
     >
-      <Box component="img" src={props.image} alt={props.title} py={6} maxWidth={70} />
+  <img src={props.image} alt={props.title} width='100px' />
       <H6 fontSize={18}>{props.title}</H6>
       <Paragraph fontSize={16} color="grey.500" mt={2}>
         {props.description}

@@ -11,7 +11,7 @@ export default function MaintenancePageView() {
       <Container>
         <MainContent>
           <SectionTitle centered title="Maintenance underway" />
-          <p>Essence is Undergoing maintenance for future growth.</p>
+          <p>This section is Undergoing maintenance for future growth.</p>
 
           <div className="img-wrapper">
             <img src="/static/pages/maintenance.svg" alt="maintenance" width="100%" />

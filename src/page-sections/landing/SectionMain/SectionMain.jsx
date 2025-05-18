@@ -6,6 +6,7 @@ import FlexBox from '@/components/flexbox/FlexBox';
 import { H6, Paragraph } from '@/components/typography'; // STYLED COMPONENTS
 
 import { HeaderTop, MainTitle, TicketWrapper } from './styles';
+import Link from '@/components/link/Link';
 export default function SectionMain() {
   return <footer>
       <HeaderTop>
@@ -48,17 +49,20 @@ export default function SectionMain() {
           </Paragraph>
 
           <FlexBox justifyContent="center" alignItems="center" gap={2}>
-            <Button LinkComponent="a" href="https://support.ui-lib.com/" target="_blank">
-              Submit Ticket
+            <Button  LinkComponent={Link}
+              href="/contact-us"
+              >
+              Contact me
             </Button>
 
             <Button
-                LinkComponent="a"
-                variant="outlined"
-                href="mailto:nawazabdullah18@gmail.com?subject=Portfolio Related Query"
-              >
-                Schedule a Meeting
-              </Button>
+              LinkComponent={Link}
+              href="/about-us"
+              variant="outlined"
+            >
+              About me
+            </Button>
+
           </FlexBox>
         </TicketWrapper>
       </Container>

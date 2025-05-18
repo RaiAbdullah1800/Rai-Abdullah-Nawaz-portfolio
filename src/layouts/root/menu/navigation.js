@@ -1,21 +1,26 @@
 export const PAGES_MENUS = [ {
-  id: 2,
-  title: 'Pages',
+  id: 1,
   child: [{
     id: 1,
-    title: 'About Us',
+    title: 'About me',
     href: '/about-us'
   }, {
     id: 2,
-    title: 'Contact Us',
+    title: 'Contact me',
     href: '/contact-us'
-  }, {
-    id: 3,
-    title: 'FAQs',
-    href: '/faqs'
-  }, {
-    id: 4,
-    title: 'Pricing',
-    href: '/pricing'
   }]
-}];
+},
+ {
+  id: 2,
+  child: [{
+    id: 1,
+    title: 'FAQs',
+    href: '/maintenance'
+  }, {
+    id: 2,
+    title: 'Pricing',
+    href: '/maintenance'
+  }]
+}
+
+];

@@ -30,12 +30,12 @@ export default function AboutUs1PageView() {
         {
         /* MEET OUR TEAM SECTION */
       }
-        <Section3 />
+        {/* <Section3 /> */}
       </Container>
 
       {
       /* CUSTOMER SAYS SECTION */
     }
-      <Section4 />
+      {/* <Section4 /> */}
     </Fragment>;
 }

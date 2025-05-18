@@ -6,7 +6,7 @@ import { isDark } from '@/utils/constants'; // STYLED COMPONENT
 export const StyledRoot = styled('div')(({
   theme
 }) => ({
-  marginBottom: '6rem',
+  marginBottom: '0rem',
   paddingBlock: '6rem',
   backgroundColor: theme.palette.grey[isDark(theme) ? 800 : 50],
   '& .i-frame': {

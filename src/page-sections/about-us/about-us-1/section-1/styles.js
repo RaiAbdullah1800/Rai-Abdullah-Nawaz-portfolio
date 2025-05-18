@@ -2,7 +2,7 @@ import styled from '@mui/material/styles/styled';
 export const StyledRoot = styled('div')(({
   theme
 }) => ({
-  marginTop: '5rem',
+  paddingTop:'5rem',
   paddingBottom: '20rem',
   '& .title': {
     fontSize: 48,
@@ -31,7 +31,6 @@ export const StyledRoot = styled('div')(({
     paddingBottom: '13rem'
   },
   [theme.breakpoints.down('sm')]: {
-    marginTop: '3rem',
     paddingBottom: '10rem',
     '& .description': {
       fontSize: 16

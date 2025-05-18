@@ -5,7 +5,7 @@ import Carousel from '@/components/carousel';
 import SectionTitle from '@/components/section-title';
 import { H6, Paragraph } from '@/components/typography'; // CUSTOM DUMMY DATA
 
-import { TEAM_MEMBERS } from './data'; // STYLED COMPONENTS
+import {  TOOLS_USED } from './data'; // STYLED COMPONENTS
 
 import { StyledRoot, TeamItem } from './styles';
 export default function Section5() {
@@ -39,7 +39,7 @@ export default function Section5() {
       </div>
 
       <Carousel slidesToShow={4} spaceBetween={0} responsive={responsive}>
-        {TEAM_MEMBERS.map(({
+        { TOOLS_USED.map(({
         designation,
         id,
         image,

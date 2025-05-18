@@ -87,13 +87,21 @@ export default function Navigation() {
         Home
       </StyledNavItem>
 
-      <MegaMenu isDark={isComponentsRoute} />
-
-      <StyledNavItem href="/components" isDark={isComponentsRoute} isActive={isActive('/components')}>
-        Components
+      <StyledNavItem href="/about-us" isActive={isActive('/about-us')} isDark={isComponentsRoute}>
+        About me
       </StyledNavItem>
 
-      <Button href="/maintenance">Submit Ticket</Button>
+      {/* <MegaMenu isDark={isComponentsRoute} /> */}
+      {/* <StyledNavItem href="/components" isDark={isComponentsRoute} isActive={isActive('/components')}>
+        Components
+      </StyledNavItem> */}
+
+
+      <StyledNavItem href="/publication" isDark={isComponentsRoute} isActive={isActive('/publication')}>
+        Publication
+      </StyledNavItem>
+
+      <Button href="/contact-us">Contact me</Button>
     </StyledNav>
   );
 
@@ -116,8 +124,13 @@ export default function Navigation() {
                 Home
               </ListItemButton>
             </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton LinkComponent={Link} href="/about-us">
+                About me
+              </ListItemButton>
+            </ListItem>
 
-            <ListItem disablePadding sx={{ flexDirection: 'column', alignItems: 'start' }}>
+            {/* <ListItem disablePadding sx={{ flexDirection: 'column', alignItems: 'start' }}>
               <ListItemButton
                 onClick={() => setCollapsed(!collapsed)}
                 sx={{ width: '100%', justifyContent: 'space-between' }}
@@ -140,19 +153,25 @@ export default function Navigation() {
                   ))}
                 </Box>
               </Collapse>
-            </ListItem>
-
+            </ListItem> */}
+{/* 
             <ListItem disablePadding>
               <ListItemButton LinkComponent={Link} href="/components">
                 Components
+              </ListItemButton>
+            </ListItem> */}
+
+            <ListItem disablePadding>
+              <ListItemButton LinkComponent={Link} href="/publication">
+                Publication
               </ListItemButton>
             </ListItem>
 
             
 
             <ListItem sx={{ mt: 1 }}>
-              <Button fullWidth href="/maintenance">
-              Submit Ticket 
+              <Button fullWidth href="/contact-us">
+              Contact me 
               </Button>
             </ListItem>
           </List>

@@ -19,7 +19,7 @@ export default function MegaMenu({
       <FlexBox alignItems="center" className="menu-item" color='text.primary' sx={{
       cursor: 'pointer'
     }}>
-        <Span>Pages</Span> <ChevronDown sx={{
+        <Span>More Pages</Span> <ChevronDown sx={{
         fontSize: 19,
         ml: 0.3
       }} />
@@ -37,7 +37,7 @@ export default function MegaMenu({
             id,
             title,
             child
-          }) => <Grid size={4} key={id}>
+          }) => <Grid size={6} key={id}>
                 <MegaMenuList title={title} child={child} />
               </Grid>)}
           </Grid>

@@ -12,37 +12,42 @@ export default function Section2() {
   return <div className="py-10">
       <Grid container spacing={3} alignItems="center">
         <Grid size={{
-        xl: 5,
-        lg: 4,
+        xl: 6,
+        lg: 6,
         xs: 12
       }}>
-          <SectionTitle title="Who we are?" />
+          <SectionTitle title="Who am I?" />
 
           <Paragraph fontSize={16} color="text.secondary" pr={7}>
-            Essence is a pre-designed UI used to build web app front-ends. It includes ready-to-use
-            components like menus, charts, tables, and forms for efficient UI design and
-            development.
+            <Paragraph fontSize={16} color="text.secondary" pr={7}>
+              I'm a Full Stack Developer with 2.5 years of experience building scalable web applications, and currently working as a Machine Learning Engineer with 7 months of industry experience. I specialize in creating AI-powered web solutions that bridge the gap between data, technology, and user needs — with a focus on delivering real-world impact for customer-facing teams in small and medium-sized businesses.
+            </Paragraph>
+
           </Paragraph>
 
           <ProgressWrapper>
-            <ProgressItem title="Design" value={70} />
-            <ProgressItem title="Development" value={56} />
-            <ProgressItem title="Marketing" value={30} />
+            <ProgressItem title="Full Stack Development" value={90} />
+            <ProgressItem title="Machine Learning Engineering" value={65} />
+            <ProgressItem title="API Development (REST & GraphQL)" value={85} />
           </ProgressWrapper>
 
+          <ProgressWrapper>
+            <ProgressItem title="AI Integration in Web Apps" value={75} />
+            <ProgressItem title="DevOps & Deployment (CI/CD)" value={60} />
+          </ProgressWrapper>
           <Button variant="outlined" color="primary">
-            Check our Work <KeyboardArrowRight />
+            Check my Work <KeyboardArrowRight />
           </Button>
         </Grid>
 
         <Grid size={{
-        xl: 7,
-        lg: 8,
+        xl: 6,
+        lg: 6,
         xs: 12
       }}>
           <ImageWrapper>
-            <img src="/static/cover/about-1.jpg" alt="about" width="100%" />
-            <img src="/static/cover/about-2.jpg" alt="about" width="100%" />
+            <img src="public/static/aboutme/MyPic2.jpeg" alt="about" width="40%" />
+            <img src="public/static/aboutme/Mypic.png" alt="about" width="50%" />
           </ImageWrapper>
         </Grid>
       </Grid>

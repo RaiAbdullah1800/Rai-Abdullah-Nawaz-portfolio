@@ -1,136 +1,87 @@
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid2';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
-import styled from '@mui/material/styles/styled'; // CUSTOM COMPONENTS
-
-import Link from '@/components/link';
-import FlexBox from '@/components/flexbox/FlexBox';
-import { Paragraph } from '@/components/typography'; // CUSTOM UTILS METHOD
-
-import { isDark } from '@/utils/constants'; // STYLED COMPONENTS
-
-const LinkList = styled('div')(({
-  theme
-}) => ({
-  gap: 12,
-  display: 'flex',
-  flexDirection: 'column',
-  a: {
-    color: theme.palette.grey[isDark(theme) ? 300 : 700]
-  }
-}));
-const StyledRoot = styled('div')(({
-  theme
-}) => ({
-  paddingTop: '5rem',
+import styled from '@mui/material/styles/styled';
+import { Paragraph } from '@/components/typography';
+import { isDark } from '@/utils/constants';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter'; // Add or remove icons as needed
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer'
+const StyledRoot = styled('div')(({ theme }) => ({
+  paddingTop: '2rem',
+  textAlign: 'center',
   ...(isDark(theme) && {
-    backgroundColor: theme.palette.grey[800]
+    backgroundColor: theme.palette.grey[900], // Optional for dark mode
+    color: theme.palette.grey[300],
   }),
   '& .divider': {
-    marginTop: '6rem'
+    marginTop: '1rem',
+    marginBottom: '1rem',
   },
-  [theme.breakpoints.down('sm')]: {
-    paddingTop: '4rem',
-    '& .divider': {
-      marginTop: '3rem'
-    }
-  }
 }));
+
+const SocialLinks = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '1rem',
+  marginBottom: '1rem',
+  a: {
+    color: theme.palette.text.secondary,
+    transition: 'color 0.3s',
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+  },
+}));
+
 export default function Footer() {
-  return <StyledRoot>
-      <Container maxWidth="lg">
-        <Grid container spacing={3}>
-          <Grid size={{
-          md: 4,
-          xs: 12
-        }}>
-            <FlexBox alignItems="center" gap={1} mb={2}>
-              <Box alt="logo" width={40} height={40} component="img" src="/static/logo/logo-png.png" />
+  return (
+    <StyledRoot>
 
-              <Paragraph fontSize={28} fontWeight={600}>
-                Essence
-              </Paragraph>
-            </FlexBox>
-
-            <Paragraph fontSize={16} lineHeight={1.7} fontWeight={500} color="text.secondary" pr={{
-            lg: 5,
-            md: 2,
-            xs: 0
-          }}>
-              Essence SaaS template is a powerful and versatile software application that provides a
-              comprehensive framework for building and delivering cloud-based solutions.
-            </Paragraph>
-          </Grid>
-
-          <Grid size={{
-          sm: 4,
-          md: 3,
-          xs: 12
-        }}>
-            <Paragraph mb={3} fontSize={20} fontWeight={600}>
-              Products
-            </Paragraph>
-
-            <LinkList>
-              <Link href="#">Project Management</Link>
-              <Link href="#">Multi-tenancy</Link>
-              <Link href="#">Scalability</Link>
-              <Link href="#">Customization</Link>
-              <Link href="#">Integration</Link>
-              <Link href="#">Mobile accessibility</Link>
-              <Link href="#">Analytics and reporting</Link>
-            </LinkList>
-          </Grid>
-
-          <Grid size={{
-          sm: 4,
-          md: 3,
-          xs: 12
-        }}>
-            <Paragraph mb={3} fontSize={20} fontWeight={600}>
-              Features
-            </Paragraph>
-
-            <LinkList>
-              <Link href="#">User management</Link>
-              <Link href="#">Workflow automation</Link>
-              <Link href="#">API access</Link>
-              <Link href="#">Data visualization</Link>
-              <Link href="#">Version control</Link>
-              <Link href="#">Upgrades</Link>
-              <Link href="#">Billing and invoicing</Link>
-            </LinkList>
-          </Grid>
-
-          <Grid size={{
-          sm: 4,
-          md: 2,
-          xs: 12
-        }}>
-            <Paragraph mb={3} fontSize={20} fontWeight={600}>
-              Explore
-            </Paragraph>
-
-            <LinkList>
-              <Link href="#">Docs</Link>
-              <Link href="#">Pricing</Link>
-              <Link href="#">Integrations</Link>
-              <Link href="#">Blog</Link>
-              <Link href="#">About</Link>
-            </LinkList>
-          </Grid>
-        </Grid>
-      </Container>
+      {/* Social Media Links */}
+      <SocialLinks>
+        <a
+          href="https://github.com/RaiAbdullah1800"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <GitHubIcon sx={{fontSize: 45}} />
+        </a>
+        <a
+          href="https://pk.linkedin.com/in/rai-abdullah-nawaz-552329203"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <LinkedInIcon sx={{fontSize: 45}} />
+        </a>
+        <a
+          href="https://stackoverflow.com/users/16928979/abdullah-nawaz"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Stack Overflow"
+        >
+          <QuestionAnswerIcon sx={{ fontSize: 45 }} />
+        </a>
+      </SocialLinks>
 
       <Divider className="divider" />
 
-      <Paragraph py={5} textAlign="center" fontSize={16} fontWeight={500}>
-        Copyright © 2023{' '}
-        <a href="https://ui-lib.com" target="_blank" rel="noreferrer">
-          UI Lib
-        </a>
-        . All rights reserved
+      {/* Copyright */}
+      <Paragraph fontSize={16} textAlign="center" py={4}>
+        Copyright ©{' '}
+        <Box
+          component="a"
+          href="mailto:nawazabdullah18@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Rai Abdullah Nawaz
+        </Box>
+        . All rights reserved.
       </Paragraph>
-    </StyledRoot>;
+    </StyledRoot>
+  );
 }

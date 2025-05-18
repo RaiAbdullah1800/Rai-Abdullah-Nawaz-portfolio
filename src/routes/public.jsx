@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom'; // CUSTOM COMPONENTS
 import Loadable from './Loadable';
 import RootLayout from '@/layouts/root/RootLayout'; // ROLE BASED PERMISSION TEST PAGE
 
-const Permission = Loadable(lazy(() => import('@/pages/permission'))); // FEATURES RELATED PAGES
 const Pricing = Loadable(lazy(() => import('@/pages/pricing')));
 const ContactUs = Loadable(lazy(() => import('@/pages/contact-us')));
 const ComingSoon = Loadable(lazy(() => import('@/pages/coming-soon')));
@@ -15,10 +14,12 @@ const Publications = Loadable(lazy(() => import('@/pages/publication/publication
 //const Publications = Loadable(lazy(()=> import('@/pages/publicaion/publication')))
 const AboutUsOne = Loadable(lazy(() => import('@/pages/about-us/about-us-1')));
 
-export const PublicRoutes = [{
-  path: 'permission',
-  element: <Permission />
-}, {
+export const PublicRoutes = [
+//   {
+//   path: 'permission',
+//   element: <Permission />
+// },
+ {
   path: 'maintenance',
   element: <Maintenance />
 }, {

@@ -19,15 +19,34 @@ export default function SectionMain() {
           xs: 20
         }}>
             <H6 mb={4} color="white" fontWeight={700} lineHeight={1.4} fontSize={{
-            sm: 36,
-            xs: 27
-          }}>
+                sm: 36,
+                xs: 27
+              }}>
               Hey there, I’m {" "}  
               <MainTitle fontSize={{sm:36, sx:27}} >
                 Abdullah Nawaz
               </MainTitle> 
               <br />
-               Full-Stack Dev × ML Engineer.
+                ML Engineerat
+              <Box
+                component="sup"
+                fontSize={20}
+              >
+                {' '}
+                <Box
+                component='a'
+                href="https://smartzoneleaders.com/"
+                target="_blank"
+                sx={{
+                  textDecoration: 'underline',
+                }}
+                
+                >
+                  @ SZL
+                </Box>
+                
+              </Box>{" "}
+              × Full-Stack Dev.
             </H6>
             
             <Paragraph color="white" fontSize={{ sm: 20, xs: 16 }} maxWidth="600px">

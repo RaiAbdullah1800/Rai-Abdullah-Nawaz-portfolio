@@ -16,5 +16,5 @@ const StyledImage = styled('img')(({
   }
 }));
 export default function Banner() {
-  return <StyledImage alt="hero" src="public/static/aboutme/my_Banner_page.jpg" />;
+  return <StyledImage alt="hero" src="/static/aboutme/my_Banner_page.jpg" />;
 }

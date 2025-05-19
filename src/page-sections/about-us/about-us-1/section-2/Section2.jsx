@@ -47,8 +47,8 @@ export default function Section2() {
         xs: 12
       }}>
           <ImageWrapper>
-            <img src="public/static/aboutme/Abdullah-Nawaz.jpeg" alt="about" width="40%" />
-            <img src="public/static/aboutme/Rai-Abdullah-Nawaz.png" alt="about" width="50%" />
+            <img src="/static/aboutme/Abdullah-Nawaz.jpeg" alt="about" width="40%" />
+            <img src="/static/aboutme/Rai-Abdullah-Nawaz.png" alt="about" width="50%" />
           </ImageWrapper>
         </Grid>
       </Grid>

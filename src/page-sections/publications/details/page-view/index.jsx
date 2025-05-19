@@ -15,7 +15,7 @@ export default function PublicationsPageView() {
     {/* <Navigation/> */}
       <HeaderEffect>
         <ImageWrapper>
-          <img src="public/static/pages/researchIllstration.png"  alt="Header Logo" />
+          <img src="/static/pages/researchIllstration.png"  alt="Header Logo" />
         </ImageWrapper>
         <Space />
       </HeaderEffect>

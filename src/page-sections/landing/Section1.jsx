@@ -12,7 +12,7 @@ import { H2, H6, Paragraph } from '@/components/typography';
 const LIST_1 = [
   {
     id: 1,
-    image: 'public/static/landing/icons/react.png',
+    image: '/static/landing/icons/react.png',
     title: 'React.js',
     description: 'Build component-driven, interactive UIs with React.js, using hooks, JSX, and modern state management libraries.'
   },

@@ -14,41 +14,31 @@ export default function Section1() {
       <img src="/static/map.png" alt="Illustration" className="map" />
 
       <div className="content">
-      <h1 className="title">
-        Got <FancyText>Questions</FancyText>? Let’s Talk.
-      </h1>
+        <h1 className="title">
+          Got <FancyText>Questions</FancyText>? Let’s Talk.
+        </h1>
 
         <Paragraph ml={2} mb={8} fontSize={18}>
-            I'd love to talk about how I can help you.
+          I'm here to help and would love to hear from you. Choose how you'd like to get in touch:
         </Paragraph>
 
         <Grid container spacing={5}>
-          <Grid size={{lg:4, md: 4, sm: 6, xs: 12 }}>
+          <Grid size={{ lg: 4, md: 4, sm: 6, xs: 12 }}>
             <div>
-              <ForumRounded sx={{ fontSize:  45, color: '#6950E8', mb: 1 }} />
-              <h3 style={{marginLeft:'10px'}}>Let's Talk</h3>
-              <Paragraph ml={1} >
-                Have a project in mind? <br /> Reach out and let's bring <br /> it to life together.
+              <ForumRounded sx={{ fontSize: 45, color: '#6950E8', mb: 1 }} />
+              <h3 style={{ marginLeft: '10px' }}>Schedule a Call</h3>
+              <Paragraph ml={1}>
+                Want to dive deep into your ideas? Schedule a call, and we can discuss everything in detail, from the initial concept to the final execution.
               </Paragraph>
             </div>
           </Grid>
 
-          <Grid size={{lg:4, md: 4, sm: 6, xs: 12 }}>
+          <Grid size={{ lg: 4, md: 4, sm: 6, xs: 12 }}>
             <div>
-              <MarkEmailUnreadRounded sx={{ fontSize:  45, color: '#A02696', mb: 1 }} />
-              <h3 style={{marginLeft:'10px'}}>Drop a Message</h3>
+              <MarkEmailUnreadRounded sx={{ fontSize: 45, color: '#A02696', mb: 1 }} />
+              <h3 style={{ marginLeft: '10px' }}>Send a Message</h3>
               <Paragraph ml={1}>
-                Whether it's a quick question <br /> or a detailed brief, I’d love to hear <br /> from you.
-              </Paragraph>
-            </div>
-          </Grid>
-
-          <Grid size={{lg:4, md: 4, sm: 6, xs: 12 }}>
-            <div>
-              <HandshakeRounded fontSize="large" color="#FA03AA"  sx={{ fontSize:  45, color: 'error.main', mb: 1 }} />
-              <h3 style={{marginLeft:'10px'}}>Collaborate</h3>
-              <Paragraph ml={1}>
-                Looking to collaborate on a <br /> product, startup, or open-source <br /> work? Let’s connect.
+                Prefer to share a quick idea or ask a question? Drop me a message, and I'll reply as soon as possible. No commitment needed!
               </Paragraph>
             </div>
           </Grid>

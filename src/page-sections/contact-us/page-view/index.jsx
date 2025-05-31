@@ -3,6 +3,7 @@ import { Fragment } from 'react'; // CUSTOM PAGE SECTION COMPONENTS
 import Section1 from '../section-1';
 import Section2 from '../section-2';
 import HeaderEffect from '@/layouts/root/HeaderEffect';
+import SchedulingSection from '../SchedulingSection';
 export default function ContactUsPageView() {
   return < >
       {
@@ -12,9 +13,9 @@ export default function ContactUsPageView() {
         <Section1 />
       </HeaderEffect>
 
-      {
-      /* CONTACT FORM SECTION */
-    }
+      
+     <SchedulingSection/>
       <Section2 />
+     
     </ >;
 }

@@ -9,7 +9,7 @@ const ContactUs = Loadable(lazy(() => import('@/pages/contact-us')));
 const ComingSoon = Loadable(lazy(() => import('@/pages/coming-soon')));
 const Maintenance = Loadable(lazy(() => import('@/pages/maintenance')));
 
-
+const Development = Loadable(lazy(() => import('@/pages/development/development.jsx')));
 const Publications = Loadable(lazy(() => import('@/pages/publication/publication')));
 //const Publications = Loadable(lazy(()=> import('@/pages/publicaion/publication')))
 const AboutUsOne = Loadable(lazy(() => import('@/pages/about-us/about-us-1')));
@@ -38,7 +38,12 @@ export const PublicRoutes = [
   // }, {
   //   path: 'faqs',
   //   element: <Faqs />
-  }, {
+  },
+  {
+    path:'development',
+    element:<Development/>
+  },
+  {
     path: 'pricing',
     element: <Pricing />
   },

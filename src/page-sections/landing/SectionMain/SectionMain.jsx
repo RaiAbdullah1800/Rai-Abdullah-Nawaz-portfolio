@@ -69,17 +69,17 @@ export default function SectionMain() {
 
           <FlexBox justifyContent="center" alignItems="center" gap={2}>
             <Button  LinkComponent={Link}
-              href="/contact-us"
+              href="/contact-us#schedule-meeting"
               >
-              Contact me
+              Schedule a Meeting
             </Button>
 
             <Button
               LinkComponent={Link}
-              href="/about-us"
+              href="/contact-us#drop-message"
               variant="outlined"
             >
-              About me
+              Drop a Message
             </Button>
 
           </FlexBox>

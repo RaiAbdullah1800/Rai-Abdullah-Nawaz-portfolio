@@ -5,7 +5,7 @@ import Header from '@/layouts/root/Navigation';
 import Footer from '@/layouts/root/Footer';
 import Section2 from '../section-2';
 import { Container } from '@mui/material';
-import Section4 from '../section-4';
+import Overview from '../overview';
 export default function LandingPageView() {
   return <Box sx={{
     height: '100%',
@@ -20,12 +20,8 @@ export default function LandingPageView() {
     }
       <Container maxWidth="lg">
         <Section2/>
-        {/* <Section4/> */}
+        <Overview/>
       </Container>
-
-      {/* <Section1 />
-      <Section4/>
-      <Section5/> */}
       <Footer/>
     </Box>;
 }

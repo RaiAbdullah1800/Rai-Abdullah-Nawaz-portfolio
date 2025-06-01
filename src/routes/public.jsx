@@ -11,8 +11,7 @@ const Maintenance = Loadable(lazy(() => import('@/pages/maintenance')));
 
 const Development = Loadable(lazy(() => import('@/pages/development/development.jsx')));
 const Publications = Loadable(lazy(() => import('@/pages/publication/publication')));
-//const Publications = Loadable(lazy(()=> import('@/pages/publicaion/publication')))
-const AboutUsOne = Loadable(lazy(() => import('@/pages/about-us/about-us-1')));
+// const AboutUsOne = Loadable(lazy(() => import('@/pages/about-us/about-us-1')));
 
 export const PublicRoutes = [
 //   {
@@ -29,10 +28,12 @@ export const PublicRoutes = [
   element: <RootLayout>
         <Outlet />
       </RootLayout>,
-  children: [{
-    path: 'about-us',
-    element: <AboutUsOne />
-  }, {
+  children: [
+  //   {
+  //   path: 'about-us',
+  //   element: <AboutUsOne />
+  // },
+   {
     path: 'contact-us',
     element: <ContactUs />
   // }, {

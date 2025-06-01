@@ -90,7 +90,7 @@ export default function Navigation() {
 
 
       <StyledNavItem href="/publication" isDark={isComponentsRoute} isActive={isActive('/publication')}>
-        Publication
+        Research work
       </StyledNavItem>
 
       <Button href="/contact-us">Contact me</Button>
@@ -155,7 +155,7 @@ export default function Navigation() {
 
             <ListItem disablePadding>
               <ListItemButton LinkComponent={Link} href="/publication">
-                Publication
+                Research work
               </ListItemButton>
             </ListItem>
 

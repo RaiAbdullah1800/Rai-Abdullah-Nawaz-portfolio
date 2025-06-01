@@ -31,6 +31,7 @@ export default function AboutUs1PageView() {
         /* MEET OUR TEAM SECTION */
       }
         {/* <Section3 /> */}
+        <Section4/>
       </Container>
 
       {

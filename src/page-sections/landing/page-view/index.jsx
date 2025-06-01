@@ -1,12 +1,11 @@
 import Box from '@mui/material/Box';
 import SectionMain from '../SectionMain';
 
-import Section4 from '../Section4';
 import Header from '@/layouts/root/Navigation';
-import Section1 from '../Section1';
-
-import Section5 from '../section-5';
 import Footer from '@/layouts/root/Footer';
+import Section2 from '../section-2';
+import { Container } from '@mui/material';
+import Section4 from '../section-4';
 export default function LandingPageView() {
   return <Box sx={{
     height: '100%',
@@ -19,9 +18,14 @@ export default function LandingPageView() {
       {
       /* CORE FEATURES AREA */
     }
-      <Section1 />
+      <Container maxWidth="lg">
+        <Section2/>
+        {/* <Section4/> */}
+      </Container>
+
+      {/* <Section1 />
       <Section4/>
-      <Section5/>
+      <Section5/> */}
       <Footer/>
     </Box>;
 }

@@ -19,29 +19,21 @@ import { useDropzone } from 'react-dropzone'
 import IncomingMsg from './incoming-msg'
 import OutgoingMsg from './outgoing-msg'
 
-// Frontend-only Groq API chat completion call using OpenAI-compatible endpoint
-const sendMessageToGroq = async ({ historyMessages, userMessage }) => {
-  const apiKey = import.meta.env.VITE_GROQ_API_KEY
-  if (!apiKey) {
-    throw new Error('Missing VITE_GROQ_API_KEY in environment. Add it to your .env (not committed).')
-  }
-
+// Proxy via Netlify Function to avoid exposing the API key in the client bundle
+const sendMessageViaFunction = async ({ historyMessages, userMessage }) => {
   // Build OpenAI-style messages with system prompt + history + new user message
   const messages = [
     { role: 'system', content: CHATBOT_SYSTEM_PROMPT },
     ...historyMessages,
-    { role: 'user', content: userMessage }
+    { role: 'user', content: userMessage },
   ]
 
-  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+  const res = await fetch('/.netlify/functions/groqChat', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${apiKey}`,
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: GROQ_MODEL,
       messages,
+      model: GROQ_MODEL,
       temperature: 0.3,
       max_tokens: 512,
     }),
@@ -49,7 +41,7 @@ const sendMessageToGroq = async ({ historyMessages, userMessage }) => {
 
   if (!res.ok) {
     const errText = await res.text().catch(() => '')
-    throw new Error(`Groq API error ${res.status}: ${errText}`)
+    throw new Error(`Proxy error ${res.status}: ${errText}`)
   }
 
   const data = await res.json()
@@ -88,7 +80,7 @@ export default function Conversation({ handleOpen }) {
         role: m.direction === 'outgoing' ? 'user' : 'assistant',
         content: m.text,
       }))
-      const replyText = await sendMessageToGroq({
+      const replyText = await sendMessageViaFunction({
         historyMessages,
         userMessage: outgoingMsg.text,
       })

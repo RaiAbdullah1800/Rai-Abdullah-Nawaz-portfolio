@@ -13,16 +13,49 @@ import {
   Typography
 } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
+import { GROQ_MODEL, CHATBOT_SYSTEM_PROMPT } from '../../utils/constants'
 
 import { useDropzone } from 'react-dropzone'
 import IncomingMsg from './incoming-msg'
 import OutgoingMsg from './outgoing-msg'
 
-// Placeholder for your actual API call
-const sendMessageToBackend = async (message) => {
-  // TODO: replace this with your real API integration
-  // e.g. const { data } = await api.sendMessage(message)
-  return Promise.resolve(`Bot reply dummy: ${message}`)
+// Frontend-only Groq API chat completion call using OpenAI-compatible endpoint
+const sendMessageToGroq = async ({ historyMessages, userMessage }) => {
+  const apiKey = import.meta.env.VITE_GROQ_API_KEY
+  if (!apiKey) {
+    throw new Error('Missing VITE_GROQ_API_KEY in environment. Add it to your .env (not committed).')
+  }
+
+  // Build OpenAI-style messages with system prompt + history + new user message
+  const messages = [
+    { role: 'system', content: CHATBOT_SYSTEM_PROMPT },
+    ...historyMessages,
+    { role: 'user', content: userMessage }
+  ]
+
+  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: GROQ_MODEL,
+      messages,
+      temperature: 0.3,
+      max_tokens: 512,
+    }),
+  })
+
+  if (!res.ok) {
+    const errText = await res.text().catch(() => '')
+    throw new Error(`Groq API error ${res.status}: ${errText}`)
+  }
+
+  const data = await res.json()
+  const content = data?.choices?.[0]?.message?.content?.trim()
+  if (!content) throw new Error('No content returned from Groq API')
+  return content
 }
 
 export default function Conversation({ handleOpen }) {
@@ -30,6 +63,7 @@ export default function Conversation({ handleOpen }) {
   const [draft, setDraft] = useState('')
   const containerRef = useRef(null)
   const theme = useTheme();
+  const [sending, setSending] = useState(false)
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: (files) => console.log(files),
@@ -48,7 +82,16 @@ export default function Conversation({ handleOpen }) {
     setDraft('')
 
     try {
-      const replyText = await sendMessageToBackend(outgoingMsg.text)
+      setSending(true)
+      // Build minimal chat history for the API in OpenAI format from local state
+      const historyMessages = messages.map(m => ({
+        role: m.direction === 'outgoing' ? 'user' : 'assistant',
+        content: m.text,
+      }))
+      const replyText = await sendMessageToGroq({
+        historyMessages,
+        userMessage: outgoingMsg.text,
+      })
       const incomingMsg = {
         id: String(Date.now() + 1),
         direction: 'incoming',
@@ -58,6 +101,15 @@ export default function Conversation({ handleOpen }) {
       setMessages(prev => [...prev, incomingMsg])
     } catch (err) {
       console.error('Failed to fetch reply', err)
+      const errorMsg = {
+        id: String(Date.now() + 2),
+        direction: 'incoming',
+        text: `Error: ${err.message}`,
+        timestamp: Date.now(),
+      }
+      setMessages(prev => [...prev, errorMsg])
+    } finally {
+      setSending(false)
     }
   }
 
@@ -130,8 +182,8 @@ export default function Conversation({ handleOpen }) {
           <Box display="flex" justifyContent="space-between" alignItems="center">
             <Box display="flex" gap={1}>
             </Box>
-            <Button variant="contained" size="small" onClick={handleSend}>
-              Send
+            <Button variant="contained" size="small" onClick={handleSend} disabled={sending || !draft.trim()}>
+              {sending ? 'Sending…' : 'Send'}
             </Button>
           </Box>
         </Box>
@@ -139,3 +191,4 @@ export default function Conversation({ handleOpen }) {
     </Card>
   )
 }
+

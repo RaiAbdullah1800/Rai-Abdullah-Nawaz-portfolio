@@ -19,7 +19,7 @@ export default React.memo(function IncomingMsg({ text, timestamp }) {
     >
       <Stack direction="row" alignItems="center" spacing={1.5} mb={1}>
         <Avatar
-          src="/static/user/user-19.png"
+          src="/static/aboutme/mycropimage.jpg"
           sx={{ width: 27, height: 27 }}
         />
         <Box>

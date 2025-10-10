@@ -34,7 +34,7 @@ export default React.memo(function OutgoingMsg({ text, timestamp }) {
           </Typography>
         </Box>
         <Avatar
-          src="/static/user/user-11.png"
+          src="/static/avatar/009-firefighter.svg"
           sx={{ width: 27, height: 27 }}
         />
       </Stack>

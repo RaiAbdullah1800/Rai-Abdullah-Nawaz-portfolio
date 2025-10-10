@@ -66,7 +66,7 @@ export default function Section4() {
           <Box maxWidth={450} position="sticky" top={0} pt={4}>
             <H2 fontSize={36}>🤖 Machine Learning & AI Systems</H2>
             <Paragraph mt={1} fontSize={18} color="text.secondary">
-              I design and deploy end‑to‑end ML and AI solutions that power intelligent applications and automated agents.
+            (Machine Learning Engineer – 10 months of industrial experience)<br/><br/>I design and deploy end‑to‑end ML and AI solutions that power intelligent applications and automated agents.
               From preprocessing to monitoring, I ensure robust, scalable intelligence across RAG chatbots, agent frameworks,
               and production-grade models using MLOps best practices.
             </Paragraph>

@@ -27,13 +27,13 @@ export default function SectionMain() {
                 Abdullah Nawaz
               </MainTitle> 
               <br />
-                ML Engineerat
+                ML Engineer
               <Box
                 component="sup"
                 fontSize={20}
               >
                 {' '}
-                <Box
+                {/* <Box
                 component='a'
                 href="https://smartzoneleaders.com/"
                 target="_blank"
@@ -43,7 +43,7 @@ export default function SectionMain() {
                 
                 >
                   @ SZL
-                </Box>
+                </Box> */}
                 
               </Box>{" "}
               × Full-Stack Dev.

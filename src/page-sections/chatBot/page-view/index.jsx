@@ -63,7 +63,7 @@ export default function ChatbotBox({ isOpen, toggleChat, theme }) {
       )}
 
       {/* Mode Toggle */}
-      <Box
+      {/* <Box
         onClick={handleModeToggle}
         sx={{
           position: 'fixed',
@@ -92,7 +92,7 @@ export default function ChatbotBox({ isOpen, toggleChat, theme }) {
         ) : (
           <MicIcon sx={{ fontSize: 24, color: theme.palette.primary.main }} />
         )}
-      </Box>
+      </Box> */}
 
       {/* Main Icon Box */}
       <Box

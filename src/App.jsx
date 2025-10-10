@@ -30,7 +30,7 @@ export default function App() {
             <RouterProvider router={router} />
 
             {/* Use the ChatbotBox component here */}
-            {/* <ChatbotBox isOpen={isOpen} toggleChat={toggleChat} theme={theme} /> */}
+            { <ChatbotBox isOpen={isOpen} toggleChat={toggleChat} theme={theme} /> }
           </RTL>
       </ThemeProvider>
     </LocalizationProvider>

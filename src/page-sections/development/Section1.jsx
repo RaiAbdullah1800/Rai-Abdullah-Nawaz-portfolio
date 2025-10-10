@@ -61,7 +61,7 @@ export default function Section1() {
             <H2 fontSize={36} >Full stack Development</H2>
             
             <Paragraph mt={1} fontSize={18} color="text.secondary">
-              (MERN Stack Specialist – 2 years of industrial experience)<br/>(FastAPI Developer – 7 months of experience) <br/><br/> I build fully responsive, scalable MERN STACK applications using modern tools, best practices, and clean,
+              (MERN Stack Specialist – 2 years of experience)<br/>(FastAPI Developer – 10 months of industrial experience) <br/><br/> I build fully responsive, scalable MERN STACK applications using modern tools, best practices, and clean,
               component-driven code.
             </Paragraph>
             

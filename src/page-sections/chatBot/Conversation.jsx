@@ -21,6 +21,11 @@ import OutgoingMsg from './outgoing-msg'
 
 // Proxy via Netlify Function to avoid exposing the API key in the client bundle
 const sendMessageViaFunction = async ({ historyMessages, userMessage }) => {
+  // Hardcoded response for monthly backend limit reached
+  return "I apologize, but I've reached my monthly processing limit and am temporarily unable to generate new responses. This is a protective measure to ensure fair usage. Please try again later when the limit resets, or feel free to explore other sections of my portfolio in the meantime. Thank you for your understanding!"
+
+  // Original API call code (commented out for now)
+  /*
   // Build OpenAI-style messages with system prompt + history + new user message
   const messages = [
     { role: 'system', content: CHATBOT_SYSTEM_PROMPT },
@@ -48,6 +53,7 @@ const sendMessageViaFunction = async ({ historyMessages, userMessage }) => {
   const content = data?.choices?.[0]?.message?.content?.trim()
   if (!content) throw new Error('No content returned from Groq API')
   return content
+  */
 }
 
 export default function Conversation({ handleOpen }) {

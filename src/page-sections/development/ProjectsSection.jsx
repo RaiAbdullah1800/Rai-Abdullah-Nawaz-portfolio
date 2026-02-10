@@ -77,30 +77,39 @@ const PROJECTS = [
   },
   {
     id: 3,
-    title: 'Chat with PDF - AI-Powered Document Intelligence',
-    description: 'Revolutionary document interaction platform enabling natural language conversations with PDFs using advanced RAG technology.',
-    technologies: ['React.js', 'FastAPI', 'RAG', 'OpenAI'],
-    image: '/static/projects/chatpdf.png',
-    detailedDescription: 'Built a sophisticated full-stack application that revolutionizes document interaction through AI-powered conversations. This innovative platform enables users to upload PDF documents and engage in natural language conversations, leveraging advanced RAG (Retrieval-Augmented Generation) technology for accurate, context-aware responses with source attribution. Developed for Smart Zone Leaders (pvt) ltd, this platform demonstrates expertise in AI integration and modern web development.',
-    githubLink: 'https://github.com/example/chatpdf',
-  },
-  {
-    id: 4,
-    title: 'ClouFlux - Edge Computing & 6G Research Platform',
-    description: 'Modern single-page web application showcasing edge computing, multi-cloud orchestration, and 6G-ready solutions research.',
-    technologies: ['React.js', 'Next.js', 'Cloud Computing', '6G Research'],
-    image: '/static/projects/cloudflux.png',
-    detailedDescription: 'A modern, single-page web application for ClouFlux, a research-driven company specializing in edge computing, multi-cloud orchestration, and 6G-ready solutions. The platform showcases cutting-edge research in cloud-native architectures, AI-powered systems, and next-generation network technologies. Developed for Smart Zone Leaders (pvt) ltd, this application demonstrates expertise in building modern web interfaces for complex technical research platforms.',
-    githubLink: 'https://github.com/example/cloudflux',
-  },
-  {
-    id: 5,
     title: 'Friends Ledger - Complete Business Management System',
-    description: 'Comprehensive business management desktop application for mobile shop with inventory, sales tracking, and automated profit/loss distribution.',
-    technologies: ['Desktop App', 'Inventory Management', 'Financial Reporting', 'Real-time Sync'],
-    image: '/static/projects/friendsledger.png',
-    detailedDescription: 'Developed a comprehensive business management desktop application for Friends mobile shop in Hafizabad, featuring inventory management, sales tracking, financial reporting, and automated investor profit/loss distribution. Streamlines daily operations through real-time data synchronization and intuitive interface. This freelance project demonstrates expertise in building robust desktop applications for business management with complex financial calculations and multi-user support.',
-    githubLink: 'https://github.com/example/friendsledger',
+    description: 'Comprehensive desktop business management application featuring inventory management, sales tracking, financial reporting, and automated investor profit distribution for small to medium enterprises.',
+    technologies: [
+      // Core Frontend Technologies
+      'React.js', 'Vite', 'Material-UI', 'React Router', 'React Query',
+      
+      // Core Backend Technologies
+      'FastAPI', 'Python', 'PostgreSQL', 'SQLAlchemy', 'Alembic',
+      
+      // Desktop & Authentication
+      'Electron', 'Electron Builder', 'JWT Authentication', 'bcrypt',
+      
+      // Database & ORM
+      'Pydantic', 'psycopg2-binary', 'python-dotenv',
+      
+      // PDF & Document Generation
+      'jsPDF', 'jspdf-autotable',
+      
+      // Frontend Libraries
+      'Axios', 'Emotion', 'Lucide React', 'React Webcam',
+      
+      // React Components
+      '@zxing/library', 'React Router DOM', '@tanstack/react-query',
+      
+      // Python Libraries
+      'passlib', 'python-jose', 'python-multipart', 'httpx', 'uvicorn',
+      
+      // Utilities & Misc
+      'TailwindCSS', 'PostCSS', 'ESLint', 'PyInstaller'
+    ],
+    image: '/static/projects/FriendsLedger.jpeg',
+    detailedDescription: 'A comprehensive business management desktop application designed to streamline operations for small to medium enterprises. Built full-stack application with React.js frontend featuring Material-UI components and real-time data synchronization using React Query. Developed Python/FastAPI backend with PostgreSQL database and complex relational models using SQLAlchemy ORM. Implemented secure JWT authentication system with role-based access control and comprehensive audit trails. Features include advanced inventory management with barcode/IMEI scanning capabilities, multi-investor profit sharing with automated distribution algorithms, partial payment tracking and sales management, comprehensive financial reporting (P&L, Cash Flow, Balance Sheet), receipt generation with thermal printer integration, and refund processing with inventory reversal. Created cross-platform desktop application using Electron with native file system access and portable deployment capabilities. Demonstrates expertise in full-stack development, business logic implementation, financial systems, database design, and desktop application development with focus on automation and scalability.',
+    githubLink: 'https://drive.google.com/drive/folders/1L1Fn0rIr4jpNOWmxx9YqBHEts9-2Yz6H?usp=sharing'
   },
   {
     id: 7,

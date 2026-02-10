@@ -11,6 +11,7 @@ import Section4 from '../section-4';
 import HeaderEffect from '@/layouts/root/HeaderEffect';
 import Section5 from '../section-5';
 import SectionTitle from '@/components/section-title';
+import ProjectsSection from '../ProjectsSection';
 export default function DevelopmentPageView() {
   return <Fragment>
       {
@@ -25,6 +26,11 @@ export default function DevelopmentPageView() {
         /* BIG BANNER IMAGE */
       }
         <Banner />
+
+        {
+        /* PROJECTS SECTION */
+      }
+        <ProjectsSection />
 
         {
         /* WHO ARE WE SECTION */

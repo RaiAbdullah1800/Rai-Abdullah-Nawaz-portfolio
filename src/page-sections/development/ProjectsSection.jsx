@@ -13,7 +13,7 @@ import { H2, H6, Paragraph } from '@/components/typography';
 
 const PROJECTS = [
   {
-    id: 8,
+    id: 1,
     title: 'MindMeta - AI-Powered Cognitive Care Assistant',
     description: 'Healthcare platform featuring real-time voice conversations between patients and empathetic AI companions for cognitive care and memory training.',
     technologies: [
@@ -58,25 +58,76 @@ const PROJECTS = [
     liveLink: 'https://mindmeta.co.uk'
   },
   {
-    id: 1,
-    title: 'Readorama - Video Text Extraction Platform',
-    description: 'Sophisticated full-stack web application using OCR technology to extract text from video frames. Built as final year project at University of Gujrat.',
-    technologies: ['React.js', 'Python', 'OCR', 'Computer Vision'],
-    image: '/static/projects/readorama.png',
-    detailedDescription: 'Readorama is an advanced video text extraction platform that leverages Optical Character Recognition technology to extract readable text from video content. The system features secure user authentication, efficient video processing pipelines, and a responsive React-based interface with real-time processing feedback. Built as my final year project at University of Gujrat, this application is invaluable for educational content analysis, video documentation, and accessibility purposes. The platform demonstrates advanced capabilities in computer vision, video processing, and modern web development.',
-    githubLink: 'https://github.com/example/readorama',
-  },
-  {
     id: 2,
-    title: 'Azure Warranty Claims Processing MVP - Garby',
-    description: 'Comprehensive web application for intelligent document processing and warranty claims automation using Azure AI services.',
-    technologies: ['Azure AI', 'React.js', 'FastAPI', 'RAG System'],
-    image: '/static/projects/garby.png',
-    detailedDescription: 'Developed a comprehensive warranty claims processing MVP that leverages Azure AI Document Intelligence for OCR and data extraction. Implemented a RAG system for natural language document queries, created responsive UI with modern design principles, and added comprehensive error handling. The application processes PDF documents, extracts structured data, enables AI-powered queries, and provides labor details lookup through an intuitive web interface. Features include real-time data management and complete API documentation.',
-    githubLink: 'https://github.com/example/garby',
+    title: 'Readorama - Video Text Extraction Platform',
+    description: 'Advanced full-stack web application that extracts text from video frames using OCR technology, featuring user authentication, real-time processing, and intelligent text recognition.',
+    technologies: [
+      // Core Frontend Technologies
+      'React.js', 'Vite', 'React Router', 'React Icons', 'Axios',
+      
+      // Core Backend Technologies
+      'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'ES6+',
+      
+      // OCR & Computer Vision
+      'Tesseract.js', 'Sharp', 'FFmpeg', 'fluent-ffmpeg',
+      
+      // Authentication & Security
+      'JWT Authentication', 'bcryptjs', 'cookie-parser', 'cors',
+      
+      // File Handling & Processing
+      'Multer', 'body-parser', 'express-validator',
+      
+      // Development Tools
+      'Nodemon', 'ESLint', 'Prettier', 'dotenv',
+      
+      // Frontend Libraries
+      'React DOM', '@vitejs/plugin-react', '@types/react',
+      
+      // Backend Utilities
+      'jsonwebtoken', 'mongoose', 'sharp', 'tesseract.js'
+    ],
+    image: '/static/projects/Readorama.jpeg',
+    detailedDescription: 'Sophisticated full-stack web application that leverages Optical Character Recognition (OCR) technology to extract text from video frames. Developed as final year project demonstrating advanced computer vision integration and modern web development practices. Built React.js frontend with Vite for optimal development experience, featuring responsive design and real-time processing feedback. Implemented Express.js backend with RESTful API architecture following MVC pattern and modular route handlers. Integrated Tesseract.js OCR engine with FFmpeg for video frame extraction and text recognition optimization. Created secure JWT-based authentication system with bcrypt password hashing and role-based access control. Features include efficient video upload system with Multer for handling large files, intelligent frame extraction algorithms, text result visualization with frame mapping, user account management with secure registration/login, and scalable MongoDB database design with Mongoose ODM. Demonstrates expertise in full-stack development, computer vision integration, video processing, authentication systems, and modern JavaScript ecosystem with focus on performance optimization and user experience.',
+    githubLink: 'https://drive.google.com/drive/folders/1t4qKyVHTZbjHFtD9ua8eIXJ2B9Y4Vylh?usp=sharing'
   },
   {
     id: 3,
+    title: 'Garby - Azure Warranty Claims Processing MVP',
+    description: 'Intelligent web application for automated warranty claims processing featuring AI-powered document extraction, natural language queries, and real-time data management using Azure cloud services.',
+    technologies: [
+      // Core Frontend Technologies
+      'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Font Awesome',
+      
+      // Azure Services
+      'Azure Blob Storage', 'Azure AI Document Intelligence', 'Azure Data Lake',
+      
+      // API & Communication
+      'REST APIs', 'Fetch API', 'Async/Await', 'JSON',
+      
+      // UI/UX Technologies
+      'Responsive Design', 'CSS Grid', 'Flexbox', 'CSS Animations',
+      
+      // Document Processing
+      'PDF Processing', 'OCR Integration', 'Data Extraction', 'CSV Export',
+      
+      // AI/ML Technologies
+      'RAG (Retrieval-Augmented Generation)', 'Natural Language Processing',
+      
+      // Development Tools
+      'Git', 'Version Control', 'Error Handling', 'Progress Tracking',
+      
+      // Web Standards
+      'Semantic HTML', 'Accessibility (WCAG)', 'Mobile-First Design',
+      
+      // Performance & Optimization
+      'Local Storage', 'Caching', 'Debouncing', 'Lazy Loading'
+    ],
+    image: '/static/projects/Garby.png',
+    detailedDescription: 'A comprehensive web application for intelligent document processing and warranty claims automation built with modern frontend technologies and Azure cloud services. Developed responsive single-page application with tab-based navigation featuring document upload with drag-and-drop functionality, real-time API status monitoring, and comprehensive error handling. Implemented AI-powered document extraction using Azure Document Intelligence with confidence scoring and field validation for warranty-specific data. Created advanced RAG query system enabling natural language searches across processed documents with VIN and repair order filtering capabilities. Built labor details lookup system with real-time data retrieval and parts/cost information display. Features include batch document processing with progress tracking, automatic Bronze layer ingestion to Azure Data Lake, CSV export functionality with formatted data extraction, missing field detection with email alerts, and comprehensive audit trails. Demonstrates expertise in frontend development, API integration, AI service implementation, document processing workflows, and building scalable cloud-integrated applications with focus on user experience and automation.',
+    githubLink: 'https://drive.google.com/drive/folders/1Xhbl-WIt7TfprbPXHuRkaME6q6MM0Ccx?usp=sharing'
+  },
+  {
+    id: 4,
     title: 'Friends Ledger - Complete Business Management System',
     description: 'Comprehensive desktop business management application featuring inventory management, sales tracking, financial reporting, and automated investor profit distribution for small to medium enterprises.',
     technologies: [
@@ -112,16 +163,61 @@ const PROJECTS = [
     githubLink: 'https://drive.google.com/drive/folders/1L1Fn0rIr4jpNOWmxx9YqBHEts9-2Yz6H?usp=sharing'
   },
   {
-    id: 7,
-    title: 'Parchem AI Assistant - Chemical Distribution Platform',
-    description: 'Intelligent AI chatbot using Streamlit and LangChain to automate customer inquiries and streamline chemical distribution.',
-    technologies: ['Streamlit', 'LangChain', 'OpenAI', 'Firebase'],
+    id: 5,
+    title: 'Parchem AI - Intelligent Chemical Distribution Chatbot',
+    description: 'AI-powered chatbot for chemical industry providing 24/7 expert assistance, automated order processing, and customer engagement for international chemical distribution.',
+    technologies: [
+      // Core Frontend Technologies
+      'Streamlit', 'Python', 'HTML5', 'CSS3',
+      
+      // AI/ML Technologies (Most Important)
+      'OpenAI GPT-4o-mini', 'LangChain', 'Prompt Engineering', 'NLP Processing',
+      
+      // Authentication & Database
+      'Firebase Authentication', 'Google Cloud Firestore', 'Firebase Admin SDK',
+      'Pyrebase4', 'Session Management',
+      
+      // Backend & API
+      'Python', 'SMTP Integration', 'Email Automation',
+      'RESTful APIs', 'JSON Processing',
+      
+      // Cloud & Deployment
+      'Heroku', 'GitHub Actions', 'CI/CD Pipeline', 'Environment Variables',
+      'Cloud Deployment', 'Streamlit Cloud',
+      
+      // Security & Authentication
+      'JWT Tokens', 'Firebase Security Rules', 'API Key Management',
+      'User Authentication', 'Data Privacy',
+      
+      // Data Processing (Medium Importance)
+      'Python-dotenv', 'TOML', 'JSON Handling', 'Environment Configuration',
+      'Secrets Management',
+      
+      // Development Tools (Medium Importance)
+      'Git', 'Version Control', 'Virtual Environment', 'Package Management',
+      'pip', 'Requirements Management',
+      
+      // UI/UX Libraries (Medium Importance)
+      'Custom CSS', 'Responsive Design', 'Mobile Optimization',
+      'User Interface Design', 'Component Architecture',
+      
+      // Python Libraries (Medium Importance)
+      'Requests', 'HTTP Libraries', 'Email Libraries', 'Cryptography',
+      'PyJWT', 'Google Cloud Libraries',
+      
+      // Business Logic (Least Important)
+      'Order Processing', 'Workflow Automation', 'Business Logic',
+      'Customer Service', 'Lead Generation',
+      
+      // Utilities & Misc (Least Important)
+      'Logging', 'Error Handling', 'Configuration Management',
+      'File System Operations', 'System Integration'
+    ],
     image: '/static/projects/parchem.png',
-    detailedDescription: 'Built an intelligent AI chatbot using Streamlit, LangChain, and OpenAI GPT-4 to automate customer inquiries and provide chemical expertise for Parchem\'s international chemical distribution business. Implemented secure user management with Firebase Authentication, developed modular Python architecture with separate packages for auth, LLM chains, and order processing. Configured CI/CD pipeline with GitHub Actions and deployed on Heroku cloud platform.',
-    githubLink: 'https://github.com/example/parchem',
+    detailedDescription: 'Developed a sophisticated AI-powered chatbot solution for Parchem, a leading international chemical distributor, transforming customer engagement through intelligent automation. Built full-stack application using Streamlit framework with custom CSS styling for responsive web interface. Implemented advanced AI capabilities using LangChain framework integrated with OpenAI GPT-4o-mini model for specialized chemical knowledge, safety information, and customer interactions. Designed and implemented secure authentication system using Firebase Authentication with Firestore database for user management, session persistence, and chat history storage. Created automated order processing workflow with structured data collection, email notifications via SMTP integration, and lead generation capabilities. Developed modular Python architecture with separate packages for authentication (firebase.py, components.py, service.py), AI/LLM processing (chains.py, prompts.py), email handling, and order processing. Implemented comprehensive system for chemical expertise including product information, safety data, synthesis details, applications, and environmental impact assessments. Features include real-time conversational AI with context awareness and memory retention, secure user authentication and session management, automated order inquiry collection with email notifications, responsive design optimized for mobile and desktop, and admin dashboard for monitoring user interactions. Deployed scalable solution on Heroku cloud platform with CI/CD pipeline using GitHub Actions for automated deployment. Demonstrates expertise in AI/ML integration, full-stack development, database design, authentication systems, and business process automation in the chemical industry domain.'
   },
   {
-    id: 8,
+    id: 6,
     title: 'PrimeFlow POS - Complete Point of Sale System',
     description: 'Production-ready POS system for retail businesses with inventory management, sales tracking, and financial reporting.',
     technologies: ['React', 'FastAPI', 'MySQL', 'Material-UI'],
@@ -130,7 +226,7 @@ const PROJECTS = [
     githubLink: 'https://github.com/example/primeflow',
   },
   {
-    id: 9,
+    id: 7,
     title: 'Uxpendit - Live AI Business Automation Platform',
     description: 'Commercial SaaS website for AI business automation services built with Next.js 14, featuring multilingual support and global deployment.',
     technologies: ['Next.js 14', 'AI Integration', 'SaaS', 'Multilingual'],

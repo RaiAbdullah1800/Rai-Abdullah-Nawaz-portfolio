@@ -219,11 +219,42 @@ const PROJECTS = [
   {
     id: 6,
     title: 'PrimeFlow POS - Complete Point of Sale System',
-    description: 'Production-ready POS system for retail businesses with inventory management, sales tracking, and financial reporting.',
-    technologies: ['React', 'FastAPI', 'MySQL', 'Material-UI'],
-    image: '/static/projects/primeflow.png',
-    detailedDescription: 'A comprehensive, production-ready Point of Sale system built for retail businesses. Features complete inventory management, sales tracking, customer relationship management, and financial reporting capabilities. Built RESTful API using FastAPI with SQLAlchemy ORM, created responsive React frontend with Material-UI components, implemented role-based access control, and designed real-time inventory management system. Includes advanced financial features like customer credit management, order returns processing, and automated receipt generation with analytics dashboard.',
-    githubLink: 'https://github.com/example/primeflow',
+    description: 'A comprehensive, production-ready Point of Sale system for retail businesses featuring inventory management, sales tracking, customer relationship management, and financial reporting capabilities.',
+    technologies: [
+      // Core Frontend Technologies
+      'React.js', 'Vite', 'Material-UI', 'React Router', 'Zustand',
+      
+      // Core Backend Technologies
+      'FastAPI', 'Python', 'MySQL', 'SQLAlchemy', 'Alembic',
+      
+      // Authentication & Security
+      'JWT Authentication', 'bcrypt', 'passlib', 'python-jose', 'python-multipart',
+      
+      // Database & ORM
+      'Pydantic', 'PyMySQL', 'python-dotenv',
+      
+      // Frontend Libraries
+      'Axios', 'Chart.js', 'Day.js', 'jsPDF', 'jspdf-autotable', 'html2canvas',
+      'Emotion', 'Notistack', 'Lodash', 'React Chart.js 2',
+      
+      // Development Tools
+      'ESLint', '@vitejs/plugin-react-swc', 'Globals',
+      
+      // Python Libraries
+      'Cryptography', 'PyJWT', 'HTTPx', 'WebSockets', 'Starlette',
+      
+      // Testing & Quality
+      'Pytest', 'pytest-mock',
+      
+      // Additional Services
+      'Supabase', 'Gotrue', 'Postgrest', 'Realtime',
+      
+      // Utilities
+      'UUID', 'Date-fns', 'Python-dateutil'
+    ],
+    image: '/static/projects/PrimeFlowSS21.png',
+    detailedDescription: 'A comprehensive Point of Sale system designed to streamline retail operations with advanced inventory management, sales tracking, and customer relationship features. Built full-stack application with React.js frontend featuring Material-UI components and responsive design for optimal user experience. Developed Python/FastAPI backend with MySQL database using SQLAlchemy ORM for efficient data management and Alembic for database migrations. Implemented secure JWT authentication system with role-based access control for admin and cashier users. Features include real-time inventory management with automatic stock updates, comprehensive order processing with multiple payment methods, customer credit management with advance payment tracking, and sophisticated order return system with inventory restoration. Built analytics dashboard with data visualization using Chart.js for sales metrics and business insights. Integrated PDF generation for professional receipts and customer history reports using jsPDF with company branding. Implemented advanced financial features including customer dues management, partial payments, and transaction history tracking. The system handles complex business logic such as inventory corrections, financial calculations, and audit trails. Demonstrates expertise in full-stack development, database design, user authentication, real-time systems, and business process automation with focus on scalability, security, and user experience.',
+    githubLink: 'https://drive.google.com/drive/folders/10b-jBwSXGnkLvjuShygoFfM8Ark8nQ-K?usp=sharing'
   },
   {
     id: 7,

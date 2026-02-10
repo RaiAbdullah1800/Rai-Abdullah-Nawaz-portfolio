@@ -24,7 +24,7 @@ export default function Section1() {
         xs: 12
       }}>
           <p className="description">
-            I build AI-driven web software that helps customer-facing teams at small and medium businesses create lasting customer relationships — by combining my 2.5 years of full stack development experience and currently working as a machine learning engineer from past 7 months.
+            Below are some key projects that showcase my expertise in AI integration, full-stack development, and modern web technologies. Each project demonstrates different aspects of my technical skills and problem-solving abilities. For more detailed information about my complete project portfolio or to discuss specific technologies and implementations, please book a meeting through the contact section.
           </p>
         </Grid>
       </Grid>

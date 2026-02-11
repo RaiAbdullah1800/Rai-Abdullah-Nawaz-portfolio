@@ -37,7 +37,7 @@ export default function Section2() {
             <ProgressItem title="DevOps & Deployment (CI/CD)" value={60} />
           </ProgressWrapper>
           <Button variant="outlined" color="primary" component={Link} to="/development">
-            For More Visit Development Section <KeyboardArrowRight />
+            For More Visit Projects Section <KeyboardArrowRight />
           </Button>
         </Grid>
 

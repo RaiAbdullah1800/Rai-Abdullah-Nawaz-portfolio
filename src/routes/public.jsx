@@ -42,7 +42,7 @@ export const PublicRoutes = [
   //   element: <Faqs />
   },
   {
-    path:'development',
+    path:'projects',
     element:<Development/>
   },
   {

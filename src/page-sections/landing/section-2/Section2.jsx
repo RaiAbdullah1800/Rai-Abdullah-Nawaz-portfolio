@@ -36,7 +36,7 @@ export default function Section2() {
             <ProgressItem title="AI Integration in Web Apps" value={75} />
             <ProgressItem title="DevOps & Deployment (CI/CD)" value={60} />
           </ProgressWrapper>
-          <Button variant="outlined" color="primary" component={Link} to="/development">
+          <Button variant="outlined" color="primary" component={Link} to="/projects">
             For More Visit Projects Section <KeyboardArrowRight />
           </Button>
         </Grid>

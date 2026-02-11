@@ -79,7 +79,7 @@ export default function Navigation() {
         Home
       </StyledNavItem>
 
-      <StyledNavItem href="/development" isActive={isActive('/development')} isDark={isComponentsRoute}>
+      <StyledNavItem href="/projects" isActive={isActive('/projects')} isDark={isComponentsRoute}>
         Projects
       </StyledNavItem>
 
@@ -121,7 +121,7 @@ export default function Navigation() {
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton LinkComponent={Link} href="/development">
+              <ListItemButton LinkComponent={Link} href="/projects">
                 Projects
               </ListItemButton>
             </ListItem>

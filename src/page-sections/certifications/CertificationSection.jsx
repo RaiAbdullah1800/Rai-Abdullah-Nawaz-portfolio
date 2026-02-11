@@ -56,6 +56,15 @@ const courses = [
     topics: ["React", "Node.js", "MongoDB", "Express"]
   },
   {
+    title: "Google Machine Learning Crash Course",
+    provider: "Google Developers",
+    instructor: "Google AI Experts",
+    duration: "Self-paced",
+    completionDate: "2023",
+    courseUrl: "https://developers.google.com/machine-learning/crash-course",
+    topics: ["Machine Learning Fundamentals", "Neural Networks", "TensorFlow", "ML Engineering", "Data Preparation", "Model Evaluation"]
+  },
+  {
     title: "DevOps and CI/CD Pipeline",
     provider: "Pluralsight",
     instructor: "Multiple Instructors",

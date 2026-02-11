@@ -15,7 +15,7 @@ export default function SZLExperience() {
     'Monitored, evaluated, and iteratively improved deployed models using real-time analytics and performance tracking.',
   ];
 
-  const cvLink = 'https://drive.google.com/file/d/1LGXzUmZQgVzeDg4vJvVJYEdgz60qy1TY/view?usp=sharing';
+  const cvLink = 'https://drive.google.com/file/d/1-MT7z7UKPi0S67FIYlYOkhOvr0nLKyTc/view?usp=sharing';
 
   return (
     <Box mt={4}>

@@ -21,7 +21,7 @@ export default function Section2() {
 
           <Paragraph fontSize={16} color="text.secondary" pr={7}>
             <Paragraph fontSize={16} color="text.secondary" pr={7}>
-              I'm a Full Stack Developer with 2.5 years of experience building scalable web applications, and worked as a Machine Learning Engineer for 10 months. I specialize in creating AI-powered web solutions that bridge the gap between data, technology, and user needs — with a focus on delivering real-world impact for customer-facing teams in small and medium-sized businesses.
+              I am a Full Stack Developer evolved into an AI & Computer Vision Engineer. After 1.5 years of building robust web architectures, I pivoted my professional focus in late 2024 to specialize in Machine Learning. Today, I bridge the gap between visual intelligence and web—building 'intelligent' applications that interpret visual data to solve real-world problems for SMBs. My mission is to move beyond static data and build seamless, CV-powered tools that act on the world in real-time.
             </Paragraph>
 
           </Paragraph>

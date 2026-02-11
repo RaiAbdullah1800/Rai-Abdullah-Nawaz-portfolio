@@ -21,21 +21,21 @@ export default function Section2() {
 
           <Paragraph fontSize={16} color="text.secondary" pr={7}>
             <Paragraph fontSize={16} color="text.secondary" pr={7}>
-              I'm an AI/ML Engineer with experience building intelligent web applications and machine learning solutions. I've been professionally working in the AI field since December 2024 through September 2025, applying cutting-edge AI skills in web development while continuously learning and implementing new technologies. My future goal is to transition into a full-time AI/ML engineering role, focusing entirely on artificial intelligence and machine learning solutions. I specialize in creating AI-powered applications that bridge the gap between data, technology, and user needs — with a focus on delivering real-world impact for customer-facing teams in small and medium-sized businesses.
+              I am a Full Stack Developer evolved into an AI & Computer Vision Engineer. After 1.5 years of building robust web architectures, I pivoted my professional focus in late 2024 to specialize in Machine Learning. Today, I bridge the gap between visual intelligence and web—building 'intelligent' applications that interpret visual data to solve real-world problems for SMBs. My mission is to move beyond static data and build seamless, CV-powered tools that act on the world in real-time.
             </Paragraph>
 
           </Paragraph>
 
           <ProgressWrapper>
-            <ProgressItem title="Machine Learning Engineering" value={90} />
-            <ProgressItem title="AI Integration in Web Apps" value={85} />
-            <ProgressItem title="Deep Learning & Neural Networks" value={75} />
+            <ProgressItem title="Computer Vision Engineering" value={90} />
+            <ProgressItem title="Machine Learning" value={85} />
+            <ProgressItem title="Full Stack Development" value={80} />
           </ProgressWrapper>
 
           <ProgressWrapper>
-            <ProgressItem title="Natural Language Processing" value={70} />
-            <ProgressItem title="Computer Vision" value={80} />
-            <ProgressItem title="Full Stack Development" value={85} />
+            <ProgressItem title="Deep Learning & Neural Networks" value={85} />
+            <ProgressItem title="AI Integration in Web Apps" value={90} />
+            <ProgressItem title="Visual Data Processing" value={75} />
           </ProgressWrapper>
           <Button variant="outlined" color="primary" component={Link} to="/coming-soon">
             Check my development Work <KeyboardArrowRight />

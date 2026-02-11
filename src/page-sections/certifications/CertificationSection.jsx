@@ -70,6 +70,42 @@ const courses = [
     duration: "10 weeks",
     completionDate: "2022",
     topics: ["Python", "Pandas", "NumPy", "Data Visualization"]
+  },
+  {
+    title: "Chai aur JavaScript Backend | Hindi",
+    provider: "YouTube",
+    instructor: "Hitesh Choudhary",
+    duration: "Self-paced",
+    completionDate: "2022",
+    courseUrl: "https://youtube.com/playlist?list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW&si=dZJs7xVkbB8ocekp",
+    topics: ["Node.js", "Express.js", "MongoDB", "JWT Authentication", "File Upload", "Data Modeling", "Production Deployment"]
+  },
+  {
+    title: "Chai aur React | with Projects",
+    provider: "YouTube",
+    instructor: "Hitesh Choudhary",
+    duration: "Self-paced",
+    completionDate: "2021",
+    courseUrl: "https://youtube.com/playlist?list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&si=hfNXmo_X3CSDwPC4",
+    topics: ["React", "React Router", "Redux Toolkit", "Context API", "Appwrite", "Custom Hooks", "Production Deployment"]
+  },
+  {
+    title: "Complete React v9",
+    provider: "Frontend Masters",
+    instructor: "Brian Holt",
+    duration: "Self-paced",
+    completionDate: "2021",
+    courseUrl: "https://frontendmasters.com/courses/complete-react-v9/?utm_source=fm&utm_medium=homepage&utm_campaign=complete-react-v9",
+    topics: ["React", "Components", "State Management", "Hooks", "Modern React"]
+  },
+  {
+    title: "React 101",
+    provider: "Codecademy",
+    instructor: "Codecademy Instructors",
+    duration: "Self-paced",
+    completionDate: "2021",
+    courseUrl: "https://www.codecademy.com/enrolled/courses/react-101",
+    topics: ["React", "Components", "State Management", "Hooks", "JSX"]
   }
 ];
 
@@ -145,16 +181,19 @@ export default function CertificationSection({ heroOnly = false }) {
                         variant="outlined"
                       />
                       <Typography 
-                        variant="caption" 
+                        variant="body2" 
                         color="primary" 
                         sx={{ 
                           cursor: 'pointer',
                           textDecoration: 'underline',
-                          '&:hover': { textDecoration: 'none' }
+                          '&:hover': { textDecoration: 'none' },
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: 0.5
                         }}
                         onClick={() => window.open(cert.credentialUrl, '_blank')}
                       >
-                        View Credential
+                        <strong>View Credential</strong> ↗
                       </Typography>
                     </Box>
                     
@@ -207,9 +246,26 @@ export default function CertificationSection({ heroOnly = false }) {
                       <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
                         <strong>Duration:</strong> {course.duration}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
                         <strong>Completed:</strong> {course.completionDate}
                       </Typography>
+                      {course.courseUrl && (
+                        <Typography 
+                          variant="body2" 
+                          color="primary" 
+                          sx={{ 
+                            cursor: 'pointer',
+                            textDecoration: 'underline',
+                            '&:hover': { textDecoration: 'none' },
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 0.5
+                          }}
+                          onClick={() => window.open(course.courseUrl, '_blank')}
+                        >
+                          <strong>View Course</strong> ↗
+                        </Typography>
+                      )}
                     </Box>
                     
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>

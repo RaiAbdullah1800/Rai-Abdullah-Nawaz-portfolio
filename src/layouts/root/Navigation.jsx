@@ -80,7 +80,11 @@ export default function Navigation() {
       </StyledNavItem>
 
       <StyledNavItem href="/development" isActive={isActive('/development')} isDark={isComponentsRoute}>
-        Development
+        Projects
+      </StyledNavItem>
+
+      <StyledNavItem href="/certifications" isActive={isActive('/certifications')} isDark={isComponentsRoute}>
+        Certifications
       </StyledNavItem>
 
       {/* <MegaMenu isDark={isComponentsRoute} /> */}
@@ -118,7 +122,12 @@ export default function Navigation() {
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton LinkComponent={Link} href="/development">
-                Development
+                Projects
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton LinkComponent={Link} href="/certifications">
+                Certifications
               </ListItemButton>
             </ListItem>
 

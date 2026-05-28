@@ -1,34 +1,41 @@
 import Container from '@mui/material/Container';
 import styled from '@mui/material/styles/styled';
-export const Space = styled('div')(({
-  theme
-}) => ({
-  [theme.breakpoints.down('sm')]: {
-    height: 170
+
+export const StyledRoot = styled('div')(({ theme }) => ({
+  paddingTop: '5rem',
+  paddingBottom: '5rem',
+  '& .title': {
+    fontSize: 48,
+    fontWeight: 600,
+    lineHeight: 1.2,
+    color: theme.palette.common.white,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 36
+    },
+    [theme.breakpoints.down(425)]: {
+      fontSize: 32
+    }
   },
-  [theme.breakpoints.down(425)]: {
-    height: 130
+  '& .description': {
+    fontSize: 18,
+    height: '100%',
+    display: 'flex',
+    alignItems: 'end',
+    color: theme.palette.common.white,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 16
+    }
+  },
+  '& .fancy-text': {
+    fontWeight: 500,
+    fontStyle: 'italic',
+    color: theme.palette.primary.main
   }
 }));
+
 export const StyledContainer = styled(Container)({
   zIndex: 1,
-  marginTop: '-6rem',
+  marginTop: '2rem',
   position: 'relative',
   paddingBottom: '5rem'
 });
-
-export const ImageWrapper = styled('div')(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'right',  // horizontal center
-  alignItems: 'right',      // vertical center
-  width: '100%',
-  height: 'auto',
-  // paddingTop: '2rem',        // optional: space above the image
-  // paddingBottom: '1rem',     // optional: space below the image
-
-  '& img': {
-    maxWidth: '100%',
-    height: 'auto',
-    objectFit: 'contain',
-  },
-}));

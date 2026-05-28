@@ -2,6 +2,18 @@ import styled from '@mui/material/styles/styled'; // CUSTOM UTILS METHOD
 import { Paragraph} from '@/components/typography';
 import { isDark } from '@/utils/constants';
 import {  keyframes } from '@mui/material/styles'; // CUSTOM COMPONENT
+const float = keyframes`
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+`;
+
 export const HeaderTop = styled('div')(({
   theme
 }) => ({
@@ -24,6 +36,7 @@ export const HeaderTop = styled('div')(({
     right: 0,
     bottom: 0,
     position: 'absolute',
+    animation: `${float} 5s ease-in-out infinite`,
     [theme.breakpoints.down('sm')]: {
       display: 'none'
     }

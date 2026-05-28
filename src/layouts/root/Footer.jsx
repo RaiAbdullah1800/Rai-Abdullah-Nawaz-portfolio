@@ -43,16 +43,19 @@ export default function Footer() {
 
       <Box
         display="flex"
+        flexDirection={{ xs: 'column', sm: 'row' }}
         justifyContent="center"
         alignItems="center"
-        flexWrap="wrap"
+        gap={{ xs: 2, sm: 0 }}
         py={4}
       >
-        {/* Using Typography (or you can keep Paragraph if it’s line‐height friendly) */}
         <Typography
           variant="body1"
-          component="span"
-          sx={{ fontSize: 20, mr: 2, display: 'flex', alignItems: 'center' }}
+          align="center"
+          sx={{
+            fontSize: { xs: 15, sm: 20 },
+            mr: { xs: 0, sm: 2 },
+          }}
         >
           Copyright ©{' '}
           <Box
@@ -63,13 +66,15 @@ export default function Footer() {
             sx={{
               ml: 0.5,
               textDecoration: 'none',
-              
               '&:hover': { textDecoration: 'underline' },
             }}
           >
             Rai Abdullah Nawaz
           </Box>
-          . All rights reserved. |
+          . All rights reserved.
+          <Box component="span" sx={{ display: { xs: 'none', sm: 'inline-block' }, ml: 2 }}>
+            |
+          </Box>
         </Typography>
 
         <SocialLinks>
@@ -77,7 +82,6 @@ export default function Footer() {
             href="https://github.com/RaiAbdullah1800"
             target="_blank"
             rel="noopener noreferrer"
-            
             aria-label="GitHub"
           >
             <GitHubIcon sx={{ fontSize: 30 }} />

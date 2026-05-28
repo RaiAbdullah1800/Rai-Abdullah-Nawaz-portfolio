@@ -32,8 +32,8 @@ const PUBLICATIONS = [
     date: 'March 3, 2025',
     publisher: 'Science & Technology Publications',
     authors: [
-      { name: 'Naveed Ahmed', isCo: true },
-      { name: 'Zahid Iqbal', isCo: true },
+      { name: 'Naveed Ahmed*', isCo: true },
+      { name: 'Zahid Iqbal*', isCo: true },
       { name: 'Abdullah Nawaz', isSelf: true },
       { name: 'Huah Yong Chan', isCo: true },
       { name: 'Fatima N. AL-Aswadi', isCo: true },

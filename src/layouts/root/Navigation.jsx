@@ -14,7 +14,7 @@ import {
   
   Toolbar
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { styled, keyframes } from '@mui/material/styles';
 
 // ICONS
 import MenuIcon from '@mui/icons-material/Menu';
@@ -27,6 +27,38 @@ import Link from '@/components/link';
 import Scrollbar from '@/components/scrollbar';
 
 // STYLED COMPONENTS
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(105, 80, 232, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(105, 80, 232, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(105, 80, 232, 0);
+  }
+`;
+
+const LogoImg = styled('img')(({ theme }) => ({
+  transition: 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, filter 0.3s ease',
+  position: 'relative',
+  zIndex: 1,
+  borderRadius: 13,
+  cursor: 'pointer',
+  animation: `${pulse} 3s infinite ease-in-out`,
+  [theme.breakpoints.up('md')]: {
+    '&:hover': {
+      transform: 'scale(1.5) rotate(8deg)',
+      boxShadow: `0 8px 20px ${theme.palette.primary.main}40`,
+      filter: `drop-shadow(0 0 8px ${theme.palette.primary.main})`,
+      animationPlayState: 'paused',
+    }
+  }
+}));
+
 const StyledNav = styled('nav')(({ theme }) => ({
   display: 'flex',
   fontSize: 14,
@@ -107,7 +139,7 @@ export default function Navigation() {
         <Scrollbar>
           <List disablePadding sx={{ minWidth: 260, height: '100%' }}>
             <ListItem sx={{ mb: 1 }}>
-            <img
+            <LogoImg
               src={settings.theme === 'light' ? '/static/logo/log-white-png.png' : '/static/logo/logo-png.png'}
               alt="logo"
               width={35}
@@ -190,31 +222,12 @@ export default function Navigation() {
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Box display="flex" alignItems="center" gap={2}>
           <Link href="/">
-          <img
+          <LogoImg
             src={settings.theme === 'light' ? '/static/logo/log-white-png.png' : '/static/logo/logo-png.png'}
             alt="logo"
             width={35}
-            // height={35}
-            style={{
-              transition: 'transform 0.3s ease, z-index 0.3s',
-              position: 'relative',
-              zIndex: 1,
-              borderRadius:13
-            }}
-            onMouseEnter={(e) => {
-              if (window.innerWidth >= 960) { // 960px is MUI's "md" breakpoint
-                e.currentTarget.style.transform = 'scale(1.85)';
-                e.currentTarget.style.zIndex = '10';
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (window.innerWidth >= 960) {
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.zIndex = '1';
-              }
-            }}
+            height={35}
           />
-
           </Link>
           <IconButton onClick={handleChangeTheme}>
             <ThemeIcon />

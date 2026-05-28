@@ -73,7 +73,7 @@ I've worked on numerous cutting-edge projects including:
 - 📱 **Mobile-First Web Applications**
 - 🔐 **Authentication & Security Systems**
 
-**👉 For complete project details, demos, and technical specifications, visit my portfolio's [Projects Section](https://www.raiabdullahnawaz.online/projects)**
+**👉 For complete project details, demos, and technical specifications, visit my portfolio's [Projects Section](https://raiabdullahnawaz.netlify.app/projects)**
 
 
 
@@ -93,7 +93,7 @@ I've worked on numerous cutting-edge projects including:
   
 **Let's build something amazing together!**
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-FF6B6B?style=for-the-badge)](https://www.raiabdullahnawaz.online)
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-FF6B6B?style=for-the-badge)](https://raiabdullahnawaz.netlify.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://pk.linkedin.com/in/rai-abdullah-nawaz-552329203)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RaiAbdullah1800)
 [![Drop Message](https://img.shields.io/badge/💬_Drop_Message-10B981?style=for-the-badge)](mailto:nawazabdullah18@gmail.com)
